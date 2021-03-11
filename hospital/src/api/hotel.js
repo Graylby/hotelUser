@@ -10,10 +10,10 @@ export const getCategoryList = () => {
 };
 
 
-export const getHotelList = (data) => {
+export const getHotelList = (params) => {
     return http.request({
         url:'/hotel/getHotelList',
-        method:'post',
-        data
+        method:'get',
+        params
     })
 };

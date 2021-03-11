@@ -15,5 +15,5 @@
 </script>
 <style lang="stylus">
 #app
-  font-size 16px//默认字体大小
+  font-size 16px //默认字体大小
 </style>

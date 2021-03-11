@@ -4,6 +4,6 @@ export function login(data) {
     return http.request({
         url:'/auth/user/login',
         method:'post',
-        data
+        data,
     })
 }

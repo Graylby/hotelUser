@@ -2,13 +2,13 @@
     <div>
         <van-field v-model="username" label="文本" placeholder="" />
         <van-field v-model="password" label="文本" placeholder="" />
-        <van-button block type="primary">登录</van-button>
+        <van-button block type="primary" @click="onClick">登录</van-button>
     </div>
 </template>
 
 <script>
     import {login} from "../api/login";
-    import store from "./store";
+    import store from "../store";
     import {setToken,setRefreshToken} from "../utils/auth";
     import router from '../router/index'
 
@@ -22,11 +22,11 @@
         },
         methods:{
             onClick(){
-
                 login({
-                    username:this.data.username,
-                    password:this.data.password,
+                    username:this.username,
+                    password:this.password,
                 }).then((res)=>{
+                    console.log(res);
                     const {token,refreshToken} = res.data;
                     store.commit('setToken',token);
                     setToken(token);

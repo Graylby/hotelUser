@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/home.vue'
+import Login from '../views/login.vue'
 import store from "../store/index";
 
 Vue.use(VueRouter);
@@ -18,7 +19,7 @@ const routes = [
     {
         path: '/login',
         name: 'login',
-        component: import('../views/login.vue'),
+        component: Login,
         meta: {
             title: '登录',
         }

@@ -45,7 +45,9 @@ function printResponse(res) {
 const http = axios.create({
     baseURL: baseUrl,
     timeout: 18000,
-    headers: {}
+    headers: {
+        "Content-Type": "application/json;"
+    }
 });
 
 // 刷新 token
@@ -57,7 +59,7 @@ async function refreshToken_() {
         refreshToken = getRefreshToken();
     }
     return await http.request({
-        url: `/user/refresh`,
+        url: `/auth/user/refresh`,
         method: 'POST',
         data: {
             refreshToken
@@ -77,8 +79,11 @@ http.interceptors.request.use((config) => {
     return config;
 });
 
+
+
 // 响应拦截器
 http.interceptors.response.use((response) => {
+
     printResponse(response);
 
     // 无感刷新 token
