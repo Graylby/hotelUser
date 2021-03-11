@@ -18,7 +18,7 @@
 </template>
 <script>
   import HeaderTop from '../components/HeaderTop'
-  import {getCategoryList} from "../api";
+  import {getCategoryList} from "../api/hotel";
   import PersonalInfo from "../components/PersonalInfo";
 
   export default {
@@ -44,7 +44,7 @@
   }
 </script>
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-  @import "../common/stylus/mixin.styl"
+  @import "../common/stylus/mixin.styl";
 
 
 </style>

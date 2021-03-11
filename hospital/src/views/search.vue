@@ -20,7 +20,7 @@
 <script>
     import HeaderTop from "../components/HeaderTop";
     import hotel from "../components/hotel";
-    import {getHotelList} from "../api";
+    import {getHotelList} from "../api/hotel";
     export default {
         data(){
             return{
