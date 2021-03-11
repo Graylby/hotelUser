@@ -25,6 +25,7 @@
 8、VConsole调试
     （index.html中）   
 满足日常应用开发  
+woceshiyixia
 ```
 ## Project setup
 ```
