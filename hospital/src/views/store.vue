@@ -11,31 +11,65 @@
                     <van-sidebar-item title="牛奶"/>
                 </van-sidebar>
             </div>
-            <div  class="goods">
-                <goods v-for="item in goods[activeKey]"
+            <div v-show="activeKey === 0" class="goods">
+                <goods v-for="item in goods[0]"
+                       @goodsNum="changeNum"
+                       :ref="item.id"
                        :key="item.id"
                        :goods="item"/>
             </div>
+            <div v-show="activeKey === 1" class="goods">
+                <goods v-for="item in goods[1]"
+                       @goodsNum="changeNum"
+                       :key="item.id"
+                       :ref="item.id"
+                       :goods="item"/>
             </div>
-        <div class="cart">
+            <div v-show="activeKey === 2" class="goods">
+                <goods v-for="item in goods[2]"
+                       @goodsNum="changeNum"
+                       :key="item.id"
+                       :ref="item.id"
+                       :goods="item"/>
+            </div>
+            <div v-show="activeKey === 3" class="goods">
+                <goods v-for="item in goods[3]"
+                       @goodsNum="changeNum"
+                       :key="item.id"
+                       :ref="item.id"
+                       :goods="item"/>
+            </div>
+            <div v-show="activeKey === 4" class="goods">
+                <goods v-for="item in goods[4]"
+                       @goodsNum="changeNum"
+                       :key="item.id"
+                       :ref="item.id"
+                       :goods="item"/>
+            </div>
+            </div>
+        <div class="cart"  @click="onCart">
             <van-icon
                     @click="show=true"
                     name="cart-o"
                     color="#ee0a24" size="15vw"/>
         </div>
         <van-action-sheet v-model="show" title="购物车">
-            <van-cell>1</van-cell>
-            <van-cell>1</van-cell>
-            <van-cell>1</van-cell>
-            <van-cell>1</van-cell>
-            <van-cell>1</van-cell>
-            <van-cell>1</van-cell>
-            <van-cell>1</van-cell>
-            <van-cell>1</van-cell>
-            <van-cell>1</van-cell>
-            <van-submit-bar
-                    style="position: fixed;bottom: 0"
-                    :price="3050" button-text="提交订单" @submit="onSubmit"/>
+
+            <div>
+                <van-card class="goods-card"
+                        v-for="item in cart"
+                        v-show="item.num"
+                        :key="item.id"
+                        :title="item.name"
+                        :num="item.num"
+                        :price="item.price"
+                        thumb="https://img01.yzcdn.cn/vant/ipad.jpeg"
+                />
+                <van-cell>1</van-cell>
+                <van-submit-bar
+                        style="position: fixed;bottom: 0"
+                        :price="total" button-text="提交订单" @submit="onSubmit"/>
+            </div>
         </van-action-sheet>
 
         </div>
@@ -51,37 +85,37 @@
                 goods:[
                     [
                     {
-                    id:11,
+                    id:1,
                     num:16,
                     price:22,
                     name:'乐事薯片'
                     },
                     {
-                        id:12,
+                        id:2,
                         num:14,
                         price:20,
                         name:'牦牛肉'
                     },
                     {
-                        id:13,
+                        id:3,
                         num:16,
                         price:3,
                         name:'呀土豆'
                     },
                     {
-                        id:14,
+                        id:4,
                         num:77,
                         price:5,
                         name:'好丽友派'
                     },
                     {
-                        id:15,
+                        id:5,
                         num:167,
                         price:6,
                         name:'奥利奥饼干'
                     },
                     {
-                        id:16,
+                        id:6,
                         num:96,
                         price:10,
                         name:'彩虹糖'
@@ -89,19 +123,19 @@
                 ],
                     [
                     {
-                        id: 21,
+                        id: 7,
                         num: 92,
                         price: 3,
                         name: "农夫山泉550ml"
                     },
                     {
-                        id: 22,
+                        id: 8,
                         num: 93,
                         price: 4,
                         name: "可口可乐瓶装"
                     },
                     {
-                        id: 23,
+                        id: 9,
                         num: 52,
                         price: 4,
                         name: "百事可乐瓶装"
@@ -109,19 +143,19 @@
                 ],
                     [
                         {
-                            id: 31,
+                            id: 10,
                             num: 92,
                             price: 2.5,
                             name: "雪花啤酒330ml"
                         },
                         {
-                            id: 32,
+                            id: 11,
                             num: 93,
                             price: 5,
                             name: "百威啤酒330ml"
                         },
                         {
-                            id: 33,
+                            id: 12,
                             num: 52,
                             price: 4.5,
                             name: "青岛啤酒330ml"
@@ -129,19 +163,19 @@
                     ],
                     [
                         {
-                            id: 41,
+                            id: 13,
                             num: 92,
                             price: 3,
                             name: "君乐宝"
                         },
                         {
-                            id: 42,
+                            id: 14,
                             num: 93,
                             price: 11,
                             name: "蒙牛"
                         },
                         {
-                            id: 43,
+                            id: 15,
                             num: 52,
                             price: 13,
                             name: "养乐多"
@@ -149,29 +183,147 @@
                     ],
                     [
                         {
-                            id: 51,
+                            id: 16,
                             num: 92,
                             price: 2,
                             name: "蒙牛"
                         },
                         {
-                            id: 52,
+                            id: 17,
                             num: 93,
                             price: 3,
                             name: "海河"
                         },
                         {
-                            id: 53,
+                            id: 18,
                             num: 52,
                             price: 3,
                             name: "伊利"
                         },
                     ],
                 ],
-                cart:{
+                cart:[
 
-                },
-                show:false
+                        {
+                            id:1,
+                            num:0,
+                            price:22,
+                            name:'乐事薯片'
+                        },
+                        {
+                            id:2,
+                            num:0,
+                            price:20,
+                            name:'牦牛肉'
+                        },
+                        {
+                            id:3,
+                            num:0,
+                            price:3,
+                            name:'呀土豆'
+                        },
+                        {
+                            id:4,
+                            num:0,
+                            price:5,
+                            name:'好丽友派'
+                        },
+                        {
+                            id:5,
+                            num:0,
+                            price:6,
+                            name:'奥利奥饼干'
+                        },
+                        {
+                            id:6,
+                            num:0,
+                            price:10,
+                            name:'彩虹糖'
+                        },
+
+
+                        {
+                            id: 7,
+                            num: 0,
+                            price: 3,
+                            name: "农夫山泉550ml"
+                        },
+                        {
+                            id: 8,
+                            num: 0,
+                            price: 4,
+                            name: "可口可乐瓶装"
+                        },
+                        {
+                            id: 9,
+                            num: 0,
+                            price: 4,
+                            name: "百事可乐瓶装"
+                        },
+
+
+                        {
+                            id: 10,
+                            num: 0,
+                            price: 2.5,
+                            name: "雪花啤酒330ml"
+                        },
+                        {
+                            id: 11,
+                            num: 0,
+                            price: 5,
+                            name: "百威啤酒330ml"
+                        },
+                        {
+                            id: 12,
+                            num: 0,
+                            price: 4.5,
+                            name: "青岛啤酒330ml"
+                        },
+
+
+                        {
+                            id: 13,
+                            num: 0,
+                            price: 3,
+                            name: "君乐宝"
+                        },
+                        {
+                            id: 14,
+                            num: 0,
+                            price: 11,
+                            name: "蒙牛"
+                        },
+                        {
+                            id: 15,
+                            num: 0,
+                            price: 13,
+                            name: "养乐多"
+                        },
+
+
+                        {
+                            id: 16,
+                            num: 0,
+                            price: 2,
+                            name: "蒙牛"
+                        },
+                        {
+                            id: 17,
+                            num: 0,
+                            price: 3,
+                            name: "海河"
+                        },
+                        {
+                            id: 18,
+                            num: 0,
+                            price: 3,
+                            name: "伊利"
+                        },
+
+                ],
+                show:false,
+                total:0
             }
         },
         mounted(){
@@ -180,8 +332,20 @@
             onChange(index){
                 console.log(index)
             },
+            onCart(){
+                let cart = this.cart
+                this.total=0
+                for (let Key in cart) {
+                    if (cart[Key].num){
+                        this.total+=cart[Key].num*cart[Key].price*100
+                    }
+                }
+            },
             onSubmit(){
                 this.show=false
+            },
+            changeNum(goods){
+                this.$set(this.cart[goods.id-1],"num",goods.num)
             }
         },
         components:{
@@ -214,5 +378,8 @@
         right 40px
         bottom 70px
         opacity 0.6
+    }
+    .goods-card{
+        font size 29
     }
 </style>

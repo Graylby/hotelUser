@@ -7,6 +7,7 @@
     >
         <template #footer>
             <van-stepper v-model="value"
+                         @change="onChange"
                          theme="round"
                          :max="goods.num"
                          min="0"
@@ -23,11 +24,21 @@
                 price:String,
                 name,String,
                 num:String,
+                id:String
             }
         },
         data(){
             return{
               value:0,
+            }
+        },
+        methods:{
+            onChange(){
+                let msg ={
+                    num:this.value,
+                    id:this.goods.id
+                }
+                this.$emit('goodsNum',msg)
             }
         }
     }
