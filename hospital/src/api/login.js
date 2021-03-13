@@ -7,3 +7,9 @@ export function login(data) {
         data,
     })
 }
+export function getId() {
+    return http.request({
+        url:'/information/user/get',
+        method:'get'
+    })
+}

@@ -8,15 +8,15 @@
                     fit="contain"
                     :src="require('../components/images/01.png')"/>
                 <van-cell
-                        style="height: 15vh"
+                        style="height: auto"
                         :title="hotel.name"
                         size="large"
                         :label="hotel.position"/>
                 <van-cell
-                        :label="hotel.info"
+                        :label="hotel.information"
                         title="详细信息"
                         size="large"
-                        style="height: 20vh"/>
+                        style="height: auto"/>
             </van-cell-group>
             <van-cell-group>
                 <van-cell title="居住日期" :value="date" @click="show = true" is-link />
@@ -24,33 +24,58 @@
                               type="range"
                               :show-confirm="false"
                               @confirm="onConfirm" />
-                <van-card
-                    price="100"
-                    title="大床房"
+                <van-card v-for="room in rooms"
+                    price="199"
+                    :key="room.index"
+                    :title="room.type"
+                          :num="room.free"
                     desc="40平方米 双床有窗"
                     :thumb="require('../components/images/大床房.png')">
                 <template #num>
-                    <van-button type="danger" round>现在预订</van-button>
+                    <van-button :id="room.type" @click="onOrder(room.type)"  type="danger" round>现在预订</van-button>
                 </template>
                 </van-card>
             </van-cell-group>
-
         </div>
+        <van-overlay :show="showOverlay">
+            <face-input1 @status="status" :use="1" />
+        </van-overlay>
     </div>
 </template>
 
 <script>
     import HeaderTop from '../components/HeaderTop'
+    import {getRoomList} from "../api/room";
+    import {getId} from "../api/login";
+    import faceInput1 from "./faceInput1";
+    import {orderHotel} from "../api/hotel";
+
     export default {
+        props:{
+            id:Number,
+        },
         data() {
             return {
+                showOverlay:false,
                 date:'',
                 show:false,
                 hotel:{},
+                rooms:[],
+                long:0,
+                user:{}
             }
         },
         mounted(){
-            this.hotel=this.$route.params.hotel
+            this.hotel = this.$route.params.hotel
+            console.log(this.hotel)
+            this.date = this.hotel.date
+            getRoomList(this.id).then(data=>{
+                console.log(data.data.data)
+                this.rooms = data.data.data
+            })
+            getId().then(res=>{
+                this.user = res.data.data
+            })
         },
         methods:{
             formatDate(date) {
@@ -61,10 +86,35 @@
                 this.show = false;
                 this.date = `${this.formatDate(start)} - ${this.formatDate(end)}`;
                 console.log((date[1]-date[0])/86400000)
+                this.long = (date[1]-date[0])/86400000
+                console.log(this.long)
             },
+            onOrder(){
+                if (this.user.face){
+                    console.log(1)
+                }else {
+                    // this.$router.push({
+                    //     name : '/faceInput'
+                    // })
+                    orderHotel({
+                        checkoutTime:'',
+                        face:'',
+                        hotelId:this.hotel.id,
+                        userId:this.user.id
+                    }).then((res)=>{
+                        console.log(res)
+                    })
+                    this.showOverlay=true
+
+                }
+            },
+            status(value){
+                this.showOverlay = value
+            }
         },
         components:{
-            HeaderTop
+            HeaderTop,
+            faceInput1
         }
     }
 </script>

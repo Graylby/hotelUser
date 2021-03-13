@@ -3,7 +3,7 @@
             :num="goods.num"
             :price="goods.price"
             :title="goods.name"
-            thumb="https://img01.yzcdn.cn/vant/ipad.jpeg"
+            :thumb="require('../components/goods/'+goods.name+'.jpg')"
     >
         <template #footer>
             <van-stepper v-model="value"
@@ -30,7 +30,12 @@
         data(){
             return{
               value:0,
+                name:this.goods.name,
+                src:"require('../components/goods/伊利.jpg')"
             }
+        },
+        mounted() {
+            console.log(this.src)
         },
         methods:{
             onChange(){

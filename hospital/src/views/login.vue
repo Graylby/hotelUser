@@ -16,8 +16,8 @@
         name: "login",
         data(){
             return{
-                username:'',
-                password:''
+                username:'zqazqazqa1',
+                password:'zqazqazqa1'
             }
         },
         methods:{

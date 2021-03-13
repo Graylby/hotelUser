@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4d49144d-6d25-4732-9047-f22b969ce2a2" name="Default Changelist" comment="network error">
+      <change beforePath="$PROJECT_DIR$/hospital/.env" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/api/hotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/api/hotel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/api/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/api/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/HeaderTop.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/components/HeaderTop.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/faceId.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/components/faceId.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/components/goods.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/hotel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/components/hotel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/faceInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/faceInput.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/hotelDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/hotelDetails.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/infoInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/infoInput.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/me.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/me.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/order.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/search.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/search.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/store.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/store.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/vue.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1pehMCwbQeWxjoG9vlWIJZ8EYcG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Project\Vue_project\github\hotelUser-main\hospital\src\components\goods" />
+      <recent name="F:\Project\Vue_project\github\hotelUser-main\hospital\src\components\images" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4d49144d-6d25-4732-9047-f22b969ce2a2" name="Default Changelist" comment="" />
+      <created>1615549413185</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615549413185</updated>
+      <workItem from="1615549416122" duration="24380000" />
+      <workItem from="1615640240769" duration="15182000" />
+    </task>
+    <task id="LOCAL-00001" summary="network error">
+      <created>1615553672205</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615553672205</updated>
+    </task>
+    <task id="LOCAL-00002" summary="network error">
+      <created>1615553861545</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615553861545</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="network error" />
+    <option name="LAST_COMMIT_MESSAGE" value="network error" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615554868872">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="0" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1152@0.0.2048.1152" timestamp="1615554868872" />
+    <state x="217" y="317" key="FileChooserDialogImpl" timestamp="1615549502793">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="217" y="317" key="FileChooserDialogImpl/0.0.2048.1152@0.0.2048.1152" timestamp="1615549502793" />
+    <state x="100" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1615652717124">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="100" y="257" width="672" height="678" key="search.everywhere.popup/0.0.2048.1152@0.0.2048.1152" timestamp="1615652717124" />
+  </component>
+</project>

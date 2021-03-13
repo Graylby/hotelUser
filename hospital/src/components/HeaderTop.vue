@@ -1,7 +1,9 @@
 <template>
   <header class="header">
     <slot name="left">
-      <van-icon @click="$router.go(-1)" name="arrow-left"/>
+      <div class="return">
+        <van-icon color="white" size="40px" @click="$router.go(-1)" name="arrow-left"/>
+      </div>
     </slot>
     <span class="header_title">
       <span class="header_title_text ellipsis">{{title}}</span>
@@ -43,5 +45,9 @@
         font-size 18px
         color #fff
         display block
-
+.return{
+  height 40px
+  width 1rem
+  padding 2.5px
+}
 </style>

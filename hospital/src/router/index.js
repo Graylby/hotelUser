@@ -72,6 +72,13 @@ const routes = [
         title: '店内商店',
         isMenu: false
     },
+    {
+        path: '/faceInput',
+        name: '/faceInput',
+        component: () => import('../views/faceInput1'),
+        title: '人脸录入',
+        isMenu: false
+    },
 
 
 ]
@@ -89,7 +96,6 @@ router.beforeEach((to, from, next)=>{
             next({name:'login'})
         }
     }
-
     next();
 });
 

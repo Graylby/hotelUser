@@ -2,7 +2,7 @@
     <div>
         <van-card
             :title="hotel.name"
-            :desc="hotel.info"
+            :desc="hotel.information"
             @click="hotelDetails"
             >
         <template #bottom>
@@ -16,9 +16,19 @@
 <script>
     export default {
         props:{
-            hotel:Object
+            oldHotel:Object,
+            liveDate:String
+        },
+        data(){
+            return{
+                hotel:this.oldHotel
+        }
         },
         mounted() {
+            console.log(this.liveDate)
+            console.log(this.hotel)
+            this.$set(this.hotel,'date',this.liveDate)
+            console.log(this.hotel)
         },
         methods:{
             hotelDetails(){

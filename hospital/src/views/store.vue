@@ -9,6 +9,7 @@
                     <van-sidebar-item title="啤酒"/>
                     <van-sidebar-item title="酸奶"/>
                     <van-sidebar-item title="牛奶"/>
+                    <van-sidebar-item title="猜你喜欢"/>
                 </van-sidebar>
             </div>
             <div v-show="activeKey === 0" class="goods">
@@ -46,6 +47,13 @@
                        :ref="item.id"
                        :goods="item"/>
             </div>
+            <div v-show="activeKey === 5" class="goods">
+                <goods v-for="item in goods[4]"
+                       @goodsNum="changeNum"
+                       :key="item.id"
+                       :ref="item.id"
+                       :goods="item"/>
+            </div>
             </div>
         <div class="cart"  @click="onCart">
             <van-icon
@@ -63,7 +71,7 @@
                         :title="item.name"
                         :num="item.num"
                         :price="item.price"
-                        thumb="https://img01.yzcdn.cn/vant/ipad.jpeg"
+                        :thumb="require('../components/goods/'+item.name+'.jpg')"
                 />
                 <van-cell>1</van-cell>
                 <van-submit-bar
@@ -78,6 +86,8 @@
 <script>
     import HeaderTop from '../components/HeaderTop'
     import goods from "../components/goods";
+    import {getId} from "../api/login";
+
     export default {
         data() {
             return {
@@ -323,10 +333,18 @@
 
                 ],
                 show:false,
-                total:0
+                total:0,
+                id:null,
+                round1:null,
+                round2:null,
+                round3:null,
             }
         },
         mounted(){
+            getId().then(data=>{
+                console.log(data)
+                this.id = data.data.data.id
+            })
         },
         methods:{
             onChange(index){
@@ -343,6 +361,13 @@
             },
             onSubmit(){
                 this.show=false
+                this.$dialog.alert({
+                    title:'成功下单',
+                    message:'商品已成功下单，马上为您送达！',
+                    theme:'round-button',
+                }).then(()=>{
+                    console.log(this.show)
+                })
             },
             changeNum(goods){
                 this.$set(this.cart[goods.id-1],"num",goods.num)
@@ -378,6 +403,7 @@
         right 40px
         bottom 70px
         opacity 0.6
+        color white
     }
     .goods-card{
         font size 29

@@ -2,11 +2,17 @@
     <div>
         <van-form>
             <div class="camera-box">
-                <video class="camera" id="video" :width="videoWidth" :height="videoHeight" v-show="!imgSrc"></video>
-                <canvas class="camera" id="canvas" :width="videoWidth" :height="videoHeight" v-show="imgSrc"></canvas>
+                <div class="camera-box-ca">
+                    <div class="camera-box-in">
+                        <video class="camera" id="video" :width="videoWidth" :height="videoHeight" v-show="!imgSrc"></video>
+                        <canvas class="camera" id="canvas" :width="videoWidth" :height="videoHeight" v-show="imgSrc"></canvas>
+                    </div>
+                </div>
                 <p class="camera-p">{{!imgSrc?'提示：请将人脸居中按"拍照"键确认':''}}</p>
-                <van-button @click="setImage" v-if="!imgSrc">拍照</van-button>
-                <van-button v-if="imgSrc" @click="setFileUpload">确定</van-button>
+                <div class="butt-box">
+                    <van-button type="info" round block @click="setImage" >确认</van-button>
+<!--                    <van-button v-if="imgSrc" @click="setFileUpload">确定</van-button>-->
+                </div>
             </div>
         </van-form>
     </div>
@@ -16,8 +22,8 @@
     export default {
         data () {
             return {
-                videoWidth: '401',
-                videoHeight: '340',
+                videoWidth: '300',
+                videoHeight: '300',
                 thisCancas: null,
                 thisContext: null,
                 thisVideo: null,
@@ -26,7 +32,6 @@
             }
         },
         mounted() {
-          this.init();
         },
         methods: {
             init () {
@@ -90,7 +95,9 @@
                 _this.thisContext.drawImage(_this.thisVideo, 0, 0, _this.videoWidth, _this.videoHeight)
                 // 获取图片base64链接
                 var image = this.thisCancas.toDataURL('image/png')
+                console.log("test:"+this.thisCancas)
                 _this.imgSrc = image;
+                this.setFileUpload();
             },
             setFileUpload(){
                 this.visible = false;
@@ -101,4 +108,22 @@
 </script>
 
 <style scoped>
+    .camera-box-ca{
+        width: 100vw;
+        height: 100vw;
+    }
+    .camera-box-in{
+        margin: 30px auto;
+        width: 300px;
+    }
+    .camera{
+        border-radius: 150px
+    }
+    .camera-p{
+        text-align: center;
+    }
+    .butt-box{
+        width: 50vw;
+        margin: 10vh 25vw;
+    }
 </style>

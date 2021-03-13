@@ -17,3 +17,10 @@ export const getHotelList = (params) => {
         params
     })
 };
+export const orderHotel = (data) => {
+    return http.request({
+        url:'/reservation/create',
+        method:'post',
+        data
+    })
+}
