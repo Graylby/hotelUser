@@ -43,17 +43,29 @@
                 // eslint-disable-next-line no-unused-vars
                 let httpZp;
                 let imgFile = this.base64ImgtoFile(cameraPhoto)
+              let data_ = new FormData();
+                data_.append('face',imgFile)
+              let status = {
+                showOverlay:false,
+                face:imgFile
+              }
                 console.log(imgFile)
-                faceInput({
-                    photo:cameraPhoto
-                }).then((data)=>{
-                    if (this.use){
-                        console.log(data)
-                        this.$emit('status',false)
-                    }else {
-                        this.$router.back()
-                    }
-                })
+              this.$emit('status',status)
+                // faceInput(data_).then((data)=>{
+                //     if (this.use){
+                //         console.log(data)
+                //         // this.$emit('status',false,data_)
+                //     }else {
+                //       console.log(data)
+                //     }
+                // })
+
+
+
+
+
+
+
                 // this.$http.post('/uploadImage', {
                 //     params: {
                 //         imageFile: cameraPhoto

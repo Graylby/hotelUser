@@ -10,6 +10,9 @@ export function infoInput(data) {
 export function faceInput(data) {
     return http.request({
         url:'/information/updatePhoto',
+        header:{
+            'Content-Type': 'multipart/form-data'
+        },
         method:'post',
         data,
     })

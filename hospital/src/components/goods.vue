@@ -1,6 +1,6 @@
 <template>
-    <van-card
-            :num="goods.num"
+    <van-card v-if="isLoad"
+            :num="num"
             :price="goods.price"
             :title="goods.name"
             :thumb="require('../components/goods/'+goods.name+'.jpg')"
@@ -24,18 +24,26 @@
                 price:String,
                 name,String,
                 num:String,
-                id:String
+                id:String,
+                isFake:Boolean
             }
         },
         data(){
             return{
-              value:0,
+                value:0,
+                num:this.goods.num,
                 name:this.goods.name,
-                src:"require('../components/goods/伊利.jpg')"
+                src:"require('../components/goods/伊利.jpg')",
+              isLoad:false
             }
         },
         mounted() {
             console.log(this.src)
+          if (!this.isFake){
+            console.log('随机数量'+Math.floor(Math.random()*99+1))
+            this.num = Math.floor(Math.random()*99+1)
+          }
+          this.isLoad = true
         },
         methods:{
             onChange(){

@@ -9,7 +9,8 @@ import './common/stylus/index.styl'
 Vue.config.productionTip = false
 
 Vue.use(utils)
-import { Sidebar,Overlay,Uploader,Row,Col,Dialog,SubmitBar,ActionSheet,SidebarItem,Stepper,AddressList,Image as VanImage,List,Card,Button,Popup,Calendar,Cell,CellGroup,Field,Form,Icon,Swipe, SwipeItem,Picker } from 'vant';
+import { Sidebar,Notify,Overlay,Uploader,Row,Col,Dialog,SubmitBar,ActionSheet,SidebarItem,Stepper,AddressList,Image as VanImage,List,Card,Button,Popup,Calendar,Cell,CellGroup,Field,Form,Icon,Swipe, SwipeItem,Picker } from 'vant';
+Vue.use(Notify)
 Vue.use(Overlay)
 Vue.use(Uploader)
 Vue.use(Row)

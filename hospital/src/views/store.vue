@@ -4,44 +4,37 @@
         <div class="content">
             <div class="bar">
                 <van-sidebar class="van-sidebar" v-model="activeKey" @change="onChange">
-                    <van-sidebar-item title="零食"/>
+                  <van-sidebar-item title="猜你喜欢"/>
+                  <van-sidebar-item title="零食"/>
                     <van-sidebar-item title="饮料"/>
                     <van-sidebar-item title="啤酒"/>
                     <van-sidebar-item title="酸奶"/>
                     <van-sidebar-item title="牛奶"/>
-                    <van-sidebar-item title="猜你喜欢"/>
                 </van-sidebar>
             </div>
-            <div v-show="activeKey === 0" class="goods">
+            <div v-show="activeKey === 1" class="goods">
                 <goods v-for="item in goods[0]"
                        @goodsNum="changeNum"
                        :ref="item.id"
                        :key="item.id"
                        :goods="item"/>
             </div>
-            <div v-show="activeKey === 1" class="goods">
+            <div v-show="activeKey === 2" class="goods">
                 <goods v-for="item in goods[1]"
                        @goodsNum="changeNum"
                        :key="item.id"
                        :ref="item.id"
                        :goods="item"/>
             </div>
-            <div v-show="activeKey === 2" class="goods">
+            <div v-show="activeKey === 3" class="goods">
                 <goods v-for="item in goods[2]"
                        @goodsNum="changeNum"
                        :key="item.id"
                        :ref="item.id"
                        :goods="item"/>
             </div>
-            <div v-show="activeKey === 3" class="goods">
-                <goods v-for="item in goods[3]"
-                       @goodsNum="changeNum"
-                       :key="item.id"
-                       :ref="item.id"
-                       :goods="item"/>
-            </div>
             <div v-show="activeKey === 4" class="goods">
-                <goods v-for="item in goods[4]"
+                <goods v-for="item in goods[3]"
                        @goodsNum="changeNum"
                        :key="item.id"
                        :ref="item.id"
@@ -53,6 +46,16 @@
                        :key="item.id"
                        :ref="item.id"
                        :goods="item"/>
+            </div>
+            <div v-show="activeKey === 0" class="goods">
+<!--                <goods v-for="item in goods[4]"-->
+<!--                       @goodsNum="changeNum"-->
+<!--                       :key="item.id"-->
+<!--                       :ref="item.id"-->
+<!--                       :goods="item"/>-->
+              <goods :goods="cart[round[0]]" :isFake="false" />
+              <goods :goods="cart[round[1]]" :isFake="false"/>
+              <goods :goods="cart[round[2]]" :isFake="false"/>
             </div>
             </div>
         <div class="cart"  @click="onCart">
@@ -335,9 +338,7 @@
                 show:false,
                 total:0,
                 id:null,
-                round1:null,
-                round2:null,
-                round3:null,
+                round:[0,0,0]
             }
         },
         mounted(){
@@ -345,8 +346,21 @@
                 console.log(data)
                 this.id = data.data.data.id
             })
+          this.suiji_shu()
+          console.log('随机数组'+this.round)
+
         },
         methods:{
+          suiji_shu(){
+            for (let i=0;i<3;i++){
+              let array = this.round
+              let a = Math.floor(Math.random()*18)
+              console.log('随机数'+a)
+              if (i==0||array[i-1]!=a){
+                this.$set(array,i,a)
+              }else i--
+            }
+          },
             onChange(index){
                 console.log(index)
             },
@@ -367,6 +381,7 @@
                     theme:'round-button',
                 }).then(()=>{
                     console.log(this.show)
+                  this.$router.back()
                 })
             },
             changeNum(goods){

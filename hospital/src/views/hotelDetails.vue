@@ -38,7 +38,7 @@
             </van-cell-group>
         </div>
         <van-overlay :show="showOverlay">
-            <face-input1 @status="status" :use="1" />
+            <face-input1 v-if="isLoad"  @status="status" :use="1" />
         </van-overlay>
     </div>
 </template>
@@ -62,7 +62,8 @@
                 hotel:{},
                 rooms:[],
                 long:0,
-                user:{}
+                user:{},
+              isLoad:false
             }
         },
         mounted(){
@@ -96,25 +97,49 @@
                     // this.$router.push({
                     //     name : '/faceInput'
                     // })
-                    orderHotel({
-                        checkoutTime:'',
-                        face:'',
-                        hotelId:this.hotel.id,
-                        userId:this.user.id
-                    }).then((res)=>{
-                        console.log(res)
-                    })
+                  this.isLoad=true
                     this.showOverlay=true
-
+                  if (this.showOverlay)
+                    console.log(1)
                 }
             },
             status(value){
-                this.showOverlay = value
-            }
+              console.log("Emit",value)
+                getId().then(res=>{
+                this.user = res.data.data
+              })
+              //记得删除
+              this.user.face = value.face
+              this.showOverlay = value.showOverlay
+              this.creatOrder()
+            },
+          creatOrder(){
+              let user = this.user
+              let hotel = this.hotel
+              let data = {
+                face:user.face,
+                hotelId:hotel.id,
+                perCheckinTime:5,
+                type:'234',
+                userId:user.id
+              }
+            console.log("创建订单传输的数据：",data)
+              //下面代码记得删
+            this.$notify({type:'success',message:'预订成功',onOpened:this.returnHome})
+
+            orderHotel(data).then(res=>{
+                console.log(res)
+                this.$notify({type:'success',message:'预订成功',onOpened:this.returnHome})
+                console.log("notify 没有执行？")
+              })
+          },
+          returnHome(){
+            this.$router.push('/')
+          },
         },
         components:{
             HeaderTop,
-            faceInput1
+            faceInput1,
         }
     }
 </script>

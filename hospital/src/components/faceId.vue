@@ -95,7 +95,6 @@
                 _this.thisContext.drawImage(_this.thisVideo, 0, 0, _this.videoWidth, _this.videoHeight)
                 // 获取图片base64链接
                 var image = this.thisCancas.toDataURL('image/png')
-                console.log("test:"+this.thisCancas)
                 _this.imgSrc = image;
                 this.setFileUpload();
             },

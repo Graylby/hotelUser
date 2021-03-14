@@ -24,3 +24,10 @@ export const orderHotel = (data) => {
         data
     })
 }
+export const service = (data) =>{
+    return http.request({
+        url:'/task/create',
+        method:"post",
+        data
+    })
+}
