@@ -44,12 +44,15 @@
                 let httpZp;
                 let imgFile = this.base64ImgtoFile(cameraPhoto)
               let data_ = new FormData();
-                data_.append('face',imgFile)
+                data_.append('photo',imgFile)
               let status = {
                 showOverlay:false,
                 face:imgFile
               }
                 console.log(imgFile)
+                faceInput(data_).then(res=>{
+                    console.log(res)
+                })
               this.$emit('status',status)
                 // faceInput(data_).then((data)=>{
                 //     if (this.use){

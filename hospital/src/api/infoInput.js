@@ -13,6 +13,9 @@ export function faceInput(data) {
         header:{
             'Content-Type': 'multipart/form-data'
         },
+        transformRequest: [function (form) {
+            return form;
+        }],
         method:'post',
         data,
     })
