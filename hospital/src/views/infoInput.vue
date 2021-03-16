@@ -55,12 +55,18 @@
                 console.log(this.ID)
                     infoInput({
                         name: this.username,
-                        idCard:this.id,
+                        idCard:this.ID,
                         phone:this.telNo,
                         temperature:this.temp
                     }).then(res=>{
+                        if (res.data.status === 200){
+                            this.$notify({type:'success',message:'信息录入成功',onClose:this.returnMe,duration:1500})
+                        }
                         console.log(res)
                     })
+            },
+            returnMe(){
+                this.$router.back()
             }
         },
         components:{

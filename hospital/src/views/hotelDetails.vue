@@ -110,18 +110,20 @@
               })
               //记得删除
               this.user.face = value.face
+                let data_ = new FormData()
+                data_.append('face',this.user.face)
               this.showOverlay = value.showOverlay
-              this.creatOrder()
+              this.creatOrder(data_)
             },
           creatOrder(){
               let user = this.user
               let hotel = this.hotel
               let data = {
-                face:user.face,
                 hotelId:hotel.id,
-                perCheckinTime:5,
                 type:'234',
-                userId:user.id
+                userId:user.id,
+                  lengthOfStay:5,
+                  perCheckinTime:'2020-02-23 00:00:00'
               }
             console.log("创建订单传输的数据：",data)
               //下面代码记得删
