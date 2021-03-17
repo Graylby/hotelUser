@@ -25,7 +25,7 @@
                 </div>
 
                 <div style="margin: 16px;">
-                    <van-button round block type="info" native-type="submit">登陆</van-button>
+                    <van-button round block type="info" native-type="submit">登录</van-button>
                 </div>
             </div>
         </van-form>

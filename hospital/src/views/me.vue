@@ -11,7 +11,7 @@
         <van-cell class="c1" title="人脸录入" is-link to="faceInput"/>
       </van-cell-group>
       <div style="width: 80vw;margin: 0 10vw">
-        <van-button  round block type="danger">退出登录</van-button>
+        <van-button @click="isLogout" round block type="danger">退出登录</van-button>
       </div>
     </div>
   </div>
@@ -19,6 +19,9 @@
 <script>
   import HeaderTop from '../components/HeaderTop'
   import {getCategoryList} from "../api/hotel";
+  import store from "../store";
+  import {removeToken,removeRefreshToken} from "../utils/auth";
+  import router from "../router";
   // import PersonalInfo from "../components/PersonalInfo";
 
   export default {
@@ -35,7 +38,27 @@
     methods:{
       changTab(index) {
         this.$router.push(this.routerList[index])
-      }
+      },
+        isLogout(){
+          this.$dialog.confirm({
+              message:'是否退出登录',
+              theme:'round-button'
+          }).then(()=>{
+              this.logOut()
+          })
+            .catch(()=>{
+
+            })
+        },
+        logOut(){
+            console.log('登出操作')
+            // store.dispatch('FedLogOut')
+            store.commit('setToken','')
+            store.commit('setRefreshToken','')
+            removeToken()
+            removeRefreshToken()
+            router.push('/login')
+        }
     },
     components:{
       HeaderTop,

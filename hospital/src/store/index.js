@@ -18,6 +18,14 @@ export default new Vuex.Store({
 
   },
   actions: {
+    // 前端 登出   同样是在action中管理
+    // FedLogOut({ commit }) {
+    //   return new Promise(resolve => {
+    //     commit('setToken', '')
+    //     commit('setRefreshToken','')
+    //     resolve()
+    //   })
+    // },
   },
   modules: {
   }

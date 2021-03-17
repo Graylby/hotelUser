@@ -18,13 +18,13 @@
 
 <script>
     import HeaderTop from '../components/HeaderTop'
-    import {getId} from "@/api/login";
-    import {service} from "@/api/hotel";
+    import {getId} from "../api/login";
+    import {service} from "../api/hotel";
 
     export default {
         data() {
             return {
-              infomation:['呼叫清理','预约澡堂','呼叫服务生'],
+              information:['呼叫清理','预约澡堂','呼叫服务生'],
               user:{},
             }
         },
@@ -39,20 +39,20 @@
         },
           sendsService(index){
             this.$dialog.confirm({
-              message: '是否确认选择'+this.infomation[index]+'服务',
+              message: '是否确认选择'+this.information[index]+'服务',
             })
                 .then(() => {
                   // on confirm
                   let data ={
-                    faceCheck:false,
+                    faceCheck:0,
                     hotelId: 1,
-                    information:this.infomation[index],
+                    information:this.information[index],
                     userId: this.user.id,
                   }
                   console.log(data,index)
                   service(data).then(res=>{
                     console.log(res)
-
+                      this.$notify({type:'success',message:'呼叫服务成功成功'})
                   })
                 })
                 .catch(() => {

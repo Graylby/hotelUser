@@ -127,11 +127,9 @@
               }
             console.log("创建订单传输的数据：",data)
               //下面代码记得删
-            this.$notify({type:'success',message:'预订成功',onOpened:this.returnHome})
-
-            orderHotel(data).then(res=>{
-                console.log(res)
-                this.$notify({type:'success',message:'预订成功',onOpened:this.returnHome})
+            orderHotel(data).then((res)=>{
+                console.log('创建定单后：'+res)
+                this.$notify({type:'success',message:'预订成功',onClose:this.returnHome,duration:1500})
                 console.log("notify 没有执行？")
               })
           },

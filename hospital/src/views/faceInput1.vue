@@ -6,7 +6,6 @@
 <!--                <img :src="picValueZero" style="height: 105px;width: 79px;">-->
 <!--            </div>-->
             <face-id v-if="cameraPreviewVisible" name="cameraPreview" ref="cameraPreview" @refreshCameraPhoto="refreshCameraPhoto"></face-id>
-            <van-uploader :after-read="afterRead" />
         </div>
     </div>
 </template>
@@ -43,17 +42,19 @@
                 // eslint-disable-next-line no-unused-vars
                 let httpZp;
                 let imgFile = this.base64ImgtoFile(cameraPhoto)
-              let data_ = new FormData();
+                let data_ = new FormData();
                 data_.append('photo',imgFile)
-              let status = {
-                showOverlay:false,
-                face:imgFile
-              }
+                let status = {
+                    showOverlay:false,
+                    face:imgFile
+                }
+                this.status = status
                 console.log(imgFile)
                 faceInput(data_).then(res=>{
                     console.log(res)
+                    this.$notify({type:'success',message:'人脸录入成功',onClose:this.returnHome,duration:1000})
                 })
-              this.$emit('status',status)
+
                 // faceInput(data_).then((data)=>{
                 //     if (this.use){
                 //         console.log(data)
@@ -103,6 +104,13 @@
                 }).then((data)=>{
                     console.log(data)
                 })
+            },
+            returnHome(){
+                if (this.use){
+                    this.$emit('status',this.status)
+                }else {
+                    this.$router.back();
+                }
             }
 
     },

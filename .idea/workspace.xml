@@ -6,16 +6,38 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d49144d-6d25-4732-9047-f22b969ce2a2" name="Default Changelist" comment="zqa yyds">
-      <change afterPath="$PROJECT_DIR$/hospital/src/components/images/back.png" afterDir="false" />
+    <list default="true" id="4d49144d-6d25-4732-9047-f22b969ce2a2" name="Default Changelist" comment="already done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/utils/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/utils/auth/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/utils/request/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/utils/request/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/faceInput1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/faceInput1.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital/src/views/hotelDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/hotelDetails.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/views/infoInput.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/infoInput.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital/src/views/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/me.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/me.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/order.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/vue.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,17 +65,30 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VIroom" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Project\Vue_project\github\hotelUser-main\hospital\src\components\images" />
       <recent name="F:\Project\Vue_project\github\hotelUser-main\hospital\src\components\goods" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="serve" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/hospital/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="serve" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -67,6 +102,8 @@
       <updated>1615549413185</updated>
       <workItem from="1615549416122" duration="24380000" />
       <workItem from="1615640240769" duration="15182000" />
+      <workItem from="1615977897241" duration="8137000" />
+      <workItem from="1615990064499" duration="1550000" />
     </task>
     <task id="LOCAL-00001" summary="network error">
       <created>1615553672205</created>
@@ -89,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615886393788</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="already done">
+      <created>1615903305693</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1615903305694</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,7 +144,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -110,28 +166,57 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="network error" />
     <MESSAGE value="zqa yyds" />
-    <option name="LAST_COMMIT_MESSAGE" value="zqa yyds" />
+    <MESSAGE value="already done" />
+    <option name="LAST_COMMIT_MESSAGE" value="already done" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615554868872">
+    <state x="0" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615957415780">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="0" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1152@0.0.2048.1152" timestamp="1615554868872" />
+    <state x="0" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1152@0.0.2048.1152" timestamp="1615957415780" />
     <state x="346" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1615903214486">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="346" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2048.1152@0.0.2048.1152" timestamp="1615903214486" />
-    <state x="217" y="317" key="FileChooserDialogImpl" timestamp="1615549502793">
+    <state x="695" y="243" key="#serve" timestamp="1615957453041">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="217" y="317" key="FileChooserDialogImpl/0.0.2048.1152@0.0.2048.1152" timestamp="1615549502793" />
-    <state x="105" y="305" key="Vcs.Push.Dialog.v2" timestamp="1615886411050">
+    <state x="695" y="243" key="#serve/0.0.2048.1152@0.0.2048.1152" timestamp="1615957453041" />
+    <state x="217" y="317" key="FileChooserDialogImpl" timestamp="1615957450143">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="105" y="305" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1615886411050" />
-    <state x="100" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1615652717124">
+    <state x="217" y="317" key="FileChooserDialogImpl/0.0.2048.1152@0.0.2048.1152" timestamp="1615957450143" />
+    <state width="1013" height="312" key="GridCell.Tab.0.bottom" timestamp="1615988136491">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="100" y="257" width="672" height="678" key="search.everywhere.popup/0.0.2048.1152@0.0.2048.1152" timestamp="1615652717124" />
+    <state width="1013" height="312" key="GridCell.Tab.0.bottom/0.0.2048.1152@0.0.2048.1152" timestamp="1615988136491" />
+    <state width="1013" height="312" key="GridCell.Tab.0.center" timestamp="1615988136490">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="1013" height="312" key="GridCell.Tab.0.center/0.0.2048.1152@0.0.2048.1152" timestamp="1615988136490" />
+    <state width="1013" height="312" key="GridCell.Tab.0.left" timestamp="1615988136490">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="1013" height="312" key="GridCell.Tab.0.left/0.0.2048.1152@0.0.2048.1152" timestamp="1615988136490" />
+    <state width="1013" height="312" key="GridCell.Tab.0.right" timestamp="1615988136490">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state width="1013" height="312" key="GridCell.Tab.0.right/0.0.2048.1152@0.0.2048.1152" timestamp="1615988136490" />
+    <state x="556" y="221" key="SettingsEditor" timestamp="1615979714116">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="556" y="221" key="SettingsEditor/0.0.2048.1152@0.0.2048.1152" timestamp="1615979714116" />
+    <state x="105" y="305" key="Vcs.Push.Dialog.v2" timestamp="1615904298333">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="105" y="305" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1615904298333" />
+    <state x="791" y="486" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615979162530">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="791" y="486" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1152@0.0.2048.1152" timestamp="1615979162530" />
+    <state x="100" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1615959022191">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="100" y="257" width="672" height="678" key="search.everywhere.popup/0.0.2048.1152@0.0.2048.1152" timestamp="1615959022191" />
   </component>
 </project>
