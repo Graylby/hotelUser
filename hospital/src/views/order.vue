@@ -1,6 +1,6 @@
 <template>
     <div class="wrap">
-        <header-top title="店内服务"/>
+        <header-top :is-return="false" title="店内服务"/>
         <div class="content">
             <van-cell-group title="店内购物">
                 <van-cell title="点击进入旅馆商店"  is-link @click="onStore"/>

@@ -6,6 +6,10 @@ import utils from './utils'
 import 'amfe-flexible'
 //初始化样式
 import './common/stylus/index.styl'
+
+import 'photo-sphere-viewer/dist/photo-sphere-viewer.css' // 全景图样式
+import PhotoSphereViewer from 'photo-sphere-viewer' // 全景图插件
+Vue.prototype.$PhotoSphereViewer = PhotoSphereViewer // 引入全景图
 Vue.config.productionTip = false
 
 Vue.use(utils)

@@ -1,6 +1,6 @@
 <template>
   <div class="wrap">
-    <header-top title="我的"/>
+    <header-top :is-return="false" title="我的"/>
     <div class="content">
 <!--      <personal-info/>-->
 <!--      <menu-button @click="changTab(0)" name="疫情信息登记"/>-->

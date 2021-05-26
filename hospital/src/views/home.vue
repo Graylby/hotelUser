@@ -1,6 +1,6 @@
 <template>
   <div class="wrap">
-    <header-top title="酒店预订"/>
+    <header-top :is-return="false" title="酒店预订"/>
     <div class="content">
       <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
         <van-swipe-item>

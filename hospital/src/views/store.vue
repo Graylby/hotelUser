@@ -74,7 +74,7 @@
                         :title="item.name"
                         :num="item.num"
                         :price="item.price"
-                        :thumb="require('../components/goods/'+item.name+'.jpg')"
+                        :thumb="require('../components/goods/'+item.img+'.jpg')"
                 />
                 <van-cell>1</van-cell>
                 <van-submit-bar
@@ -101,37 +101,43 @@
                     id:1,
                     num:16,
                     price:22,
-                    name:'乐事薯片'
+                    name:'乐事薯片',
+                        img:'leshi'
                     },
                     {
                         id:2,
                         num:14,
                         price:20,
-                        name:'牦牛肉'
+                        name:'牦牛肉',
+                        img:'maoniu'
                     },
                     {
                         id:3,
                         num:16,
                         price:3,
-                        name:'呀土豆'
+                        name:'呀土豆',
+                        img:'yatudou'
                     },
                     {
                         id:4,
                         num:77,
                         price:5,
-                        name:'好丽友派'
+                        name:'好丽友派',
+                        img:'haoliyou'
                     },
                     {
                         id:5,
                         num:167,
                         price:6,
-                        name:'奥利奥饼干'
+                        name:'奥利奥饼干',
+                        img:'aoliao'
                     },
                     {
                         id:6,
                         num:96,
                         price:10,
-                        name:'彩虹糖'
+                        name:'彩虹糖',
+                        img:'caihong'
                     },
                 ],
                     [
@@ -139,19 +145,22 @@
                         id: 7,
                         num: 92,
                         price: 3,
-                        name: "农夫山泉550ml"
+                        name: "农夫山泉550ml",
+                        img:'nongfu'
                     },
                     {
                         id: 8,
                         num: 93,
                         price: 4,
-                        name: "可口可乐瓶装"
+                        name: "可口可乐瓶装",
+                        img:'kekou'
                     },
                     {
                         id: 9,
                         num: 52,
                         price: 4,
-                        name: "百事可乐瓶装"
+                        name: "百事可乐瓶装",
+                        img:'baishi'
                     },
                 ],
                     [
@@ -159,19 +168,22 @@
                             id: 10,
                             num: 92,
                             price: 2.5,
-                            name: "雪花啤酒330ml"
+                            name: "雪花啤酒330ml",
+                            img:'xuehua'
                         },
                         {
                             id: 11,
                             num: 93,
                             price: 5,
-                            name: "百威啤酒330ml"
+                            name: "百威啤酒330ml",
+                            img:'baiwei'
                         },
                         {
                             id: 12,
                             num: 52,
                             price: 4.5,
-                            name: "青岛啤酒330ml"
+                            name: "青岛啤酒330ml",
+                            img:'qingdao'
                         },
                     ],
                     [
@@ -179,19 +191,22 @@
                             id: 13,
                             num: 92,
                             price: 3,
-                            name: "君乐宝"
+                            name: "君乐宝",
+                            img:'junlebao'
                         },
                         {
                             id: 14,
                             num: 93,
                             price: 11,
-                            name: "蒙牛"
+                            name: "蒙牛",
+                            img:'mengniu'
                         },
                         {
                             id: 15,
                             num: 52,
                             price: 13,
-                            name: "养乐多"
+                            name: "养乐多",
+                            img:'yangleduo'
                         },
                     ],
                     [
@@ -199,19 +214,22 @@
                             id: 16,
                             num: 92,
                             price: 2,
-                            name: "蒙牛"
+                            name: "蒙牛",
+                            img:'mengniu'
                         },
                         {
                             id: 17,
                             num: 93,
                             price: 3,
-                            name: "海河"
+                            name: "海河",
+                            img:'haihe'
                         },
                         {
                             id: 18,
                             num: 52,
                             price: 3,
-                            name: "伊利"
+                            name: "伊利",
+                            img:'yili'
                         },
                     ],
                 ],
@@ -221,37 +239,43 @@
                             id:1,
                             num:0,
                             price:22,
-                            name:'乐事薯片'
+                            name:'乐事薯片',
+                            img:'leshi'
                         },
                         {
                             id:2,
                             num:0,
                             price:20,
-                            name:'牦牛肉'
+                            name:'牦牛肉',
+                            img:'maoniu'
                         },
                         {
                             id:3,
                             num:0,
                             price:3,
-                            name:'呀土豆'
+                            name:'呀土豆',
+                            img:'yatudou'
                         },
                         {
                             id:4,
                             num:0,
                             price:5,
-                            name:'好丽友派'
+                            name:'好丽友派',
+                            img:'haoliyou'
                         },
                         {
                             id:5,
                             num:0,
                             price:6,
-                            name:'奥利奥饼干'
+                            name:'奥利奥饼干',
+                            img:'aoliao'
                         },
                         {
                             id:6,
                             num:0,
                             price:10,
-                            name:'彩虹糖'
+                            name:'彩虹糖',
+                            img:'caihong'
                         },
 
 
@@ -259,19 +283,22 @@
                             id: 7,
                             num: 0,
                             price: 3,
-                            name: "农夫山泉550ml"
+                            name: "农夫山泉550ml",
+                            img:'nongfu'
                         },
                         {
                             id: 8,
                             num: 0,
                             price: 4,
-                            name: "可口可乐瓶装"
+                            name: "可口可乐瓶装",
+                            img:'kekou'
                         },
                         {
                             id: 9,
                             num: 0,
                             price: 4,
-                            name: "百事可乐瓶装"
+                            name: "百事可乐瓶装",
+                            img:'baishi'
                         },
 
 
@@ -279,19 +306,22 @@
                             id: 10,
                             num: 0,
                             price: 2.5,
-                            name: "雪花啤酒330ml"
+                            name: "雪花啤酒330ml",
+                            img:'xuehua'
                         },
                         {
                             id: 11,
                             num: 0,
                             price: 5,
-                            name: "百威啤酒330ml"
+                            name: "百威啤酒330ml",
+                            img:'baiwei'
                         },
                         {
                             id: 12,
                             num: 0,
                             price: 4.5,
-                            name: "青岛啤酒330ml"
+                            name: "青岛啤酒330ml",
+                            img:'qingdao'
                         },
 
 
@@ -299,19 +329,22 @@
                             id: 13,
                             num: 0,
                             price: 3,
-                            name: "君乐宝"
+                            name: "君乐宝",
+                            img:'junlebao'
                         },
                         {
                             id: 14,
                             num: 0,
                             price: 11,
-                            name: "蒙牛"
+                            name: "蒙牛",
+                            img:'mengniu'
                         },
                         {
                             id: 15,
                             num: 0,
                             price: 13,
-                            name: "养乐多"
+                            name: "养乐多",
+                            img:'yangleduo'
                         },
 
 
@@ -319,19 +352,22 @@
                             id: 16,
                             num: 0,
                             price: 2,
-                            name: "蒙牛"
+                            name: "蒙牛",
+                            img:'mengniu'
                         },
                         {
                             id: 17,
                             num: 0,
                             price: 3,
-                            name: "海河"
+                            name: "海河",
+                            img:'haihe'
                         },
                         {
                             id: 18,
                             num: 0,
                             price: 3,
-                            name: "伊利"
+                            name: "伊利",
+                            img:'yili'
                         },
 
                 ],

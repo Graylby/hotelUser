@@ -27,17 +27,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d49144d-6d25-4732-9047-f22b969ce2a2" name="Default Changelist" comment="already done">
+      <change afterPath="$PROJECT_DIR$/hospital/src/views/panorama/panorama.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hospital/src/views/panorama/test.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/HeaderTop.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/components/HeaderTop.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/faceId.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/components/faceId.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/components/goods.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/乐事.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/乐事薯片.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/伊利.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/养乐多.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/农夫山泉.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/农夫山泉550ml.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/可口可乐瓶装.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/君乐宝.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/呀土豆.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/呀土豆.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/奥利奥.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/奥利奥饼干.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/好丽友派.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/好丽友派.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/彩虹糖.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/彩虹糖.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/海河.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/牦牛肉.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/百事可乐.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/百事可乐瓶装.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/百威.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/百威啤酒330ml.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/蒙牛.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/雪花.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/雪花啤酒330ml.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods/青岛啤酒330ml.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/images/大床房.png" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/components/images/dachuangfang.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/utils/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/utils/auth/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/utils/request/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/utils/request/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital/src/views/faceInput1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/faceInput1.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/home.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital/src/views/hotelDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/hotelDetails.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/views/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital/src/views/me.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/me.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital/src/views/order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/order.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/store.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/store.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +81,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -65,7 +99,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VIroom" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../aifactory" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -74,11 +108,21 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Project\Vue_project\github\hotelUser-main\hospital\src\views\panorama" />
       <recent name="F:\Project\Vue_project\github\hotelUser-main\hospital\src\components\images" />
       <recent name="F:\Project\Vue_project\github\hotelUser-main\hospital\src\components\goods" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.serve">
+    <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="serve" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/hospital/package.json" />
       <command value="run" />
@@ -89,6 +133,10 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="npm.build" />
+      <item itemvalue="npm.serve" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -103,7 +151,25 @@
       <workItem from="1615549416122" duration="24380000" />
       <workItem from="1615640240769" duration="15182000" />
       <workItem from="1615977897241" duration="8137000" />
-      <workItem from="1615990064499" duration="1550000" />
+      <workItem from="1615990064499" duration="1883000" />
+      <workItem from="1616032256540" duration="6030000" />
+      <workItem from="1616062234197" duration="615000" />
+      <workItem from="1616064480068" duration="10000" />
+      <workItem from="1616065304798" duration="2252000" />
+      <workItem from="1616632995714" duration="60000" />
+      <workItem from="1618138662316" duration="3801000" />
+      <workItem from="1618210474033" duration="528000" />
+      <workItem from="1618211016619" duration="2126000" />
+      <workItem from="1618278747927" duration="708000" />
+      <workItem from="1618304123020" duration="2098000" />
+      <workItem from="1618363692480" duration="654000" />
+      <workItem from="1618633432323" duration="1224000" />
+      <workItem from="1618670265236" duration="604000" />
+      <workItem from="1618682851960" duration="982000" />
+      <workItem from="1621425959292" duration="1346000" />
+      <workItem from="1621495393941" duration="2970000" />
+      <workItem from="1621790209487" duration="1467000" />
+      <workItem from="1621959015072" duration="6595000" />
     </task>
     <task id="LOCAL-00001" summary="network error">
       <created>1615553672205</created>
@@ -133,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615903305694</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="last">
+      <created>1615991999147</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1615991999147</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,13 +240,18 @@
     <MESSAGE value="network error" />
     <MESSAGE value="zqa yyds" />
     <MESSAGE value="already done" />
-    <option name="LAST_COMMIT_MESSAGE" value="already done" />
+    <MESSAGE value="last" />
+    <option name="LAST_COMMIT_MESSAGE" value="last" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615957415780">
+    <state x="190" y="243" key="#build" timestamp="1621822504671">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="0" y="234" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1152@0.0.2048.1152" timestamp="1615957415780" />
+    <state x="190" y="243" key="#build/0.0.2048.1152@0.0.2048.1152" timestamp="1621822504671" />
+    <state x="345" y="201" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621822263664">
+      <screen x="0" y="0" width="2048" height="1152" />
+    </state>
+    <state x="345" y="201" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1152@0.0.2048.1152" timestamp="1621822263664" />
     <state x="346" y="326" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1615903214486">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -182,34 +260,34 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="695" y="243" key="#serve/0.0.2048.1152@0.0.2048.1152" timestamp="1615957453041" />
-    <state x="217" y="317" key="FileChooserDialogImpl" timestamp="1615957450143">
+    <state x="217" y="317" key="FileChooserDialogImpl" timestamp="1618304135185">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="217" y="317" key="FileChooserDialogImpl/0.0.2048.1152@0.0.2048.1152" timestamp="1615957450143" />
-    <state width="1013" height="312" key="GridCell.Tab.0.bottom" timestamp="1615988136491">
+    <state x="217" y="317" key="FileChooserDialogImpl/0.0.2048.1152@0.0.2048.1152" timestamp="1618304135185" />
+    <state width="895" height="164" key="GridCell.Tab.0.bottom" timestamp="1622037637873">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1013" height="312" key="GridCell.Tab.0.bottom/0.0.2048.1152@0.0.2048.1152" timestamp="1615988136491" />
-    <state width="1013" height="312" key="GridCell.Tab.0.center" timestamp="1615988136490">
+    <state width="895" height="164" key="GridCell.Tab.0.bottom/0.0.2048.1152@0.0.2048.1152" timestamp="1622037637873" />
+    <state width="895" height="164" key="GridCell.Tab.0.center" timestamp="1622037637873">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1013" height="312" key="GridCell.Tab.0.center/0.0.2048.1152@0.0.2048.1152" timestamp="1615988136490" />
-    <state width="1013" height="312" key="GridCell.Tab.0.left" timestamp="1615988136490">
+    <state width="895" height="164" key="GridCell.Tab.0.center/0.0.2048.1152@0.0.2048.1152" timestamp="1622037637873" />
+    <state width="895" height="164" key="GridCell.Tab.0.left" timestamp="1622037637873">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1013" height="312" key="GridCell.Tab.0.left/0.0.2048.1152@0.0.2048.1152" timestamp="1615988136490" />
-    <state width="1013" height="312" key="GridCell.Tab.0.right" timestamp="1615988136490">
+    <state width="895" height="164" key="GridCell.Tab.0.left/0.0.2048.1152@0.0.2048.1152" timestamp="1622037637873" />
+    <state width="895" height="164" key="GridCell.Tab.0.right" timestamp="1622037637873">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1013" height="312" key="GridCell.Tab.0.right/0.0.2048.1152@0.0.2048.1152" timestamp="1615988136490" />
+    <state width="895" height="164" key="GridCell.Tab.0.right/0.0.2048.1152@0.0.2048.1152" timestamp="1622037637873" />
     <state x="556" y="221" key="SettingsEditor" timestamp="1615979714116">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="556" y="221" key="SettingsEditor/0.0.2048.1152@0.0.2048.1152" timestamp="1615979714116" />
-    <state x="105" y="305" key="Vcs.Push.Dialog.v2" timestamp="1615904298333">
+    <state x="105" y="305" key="Vcs.Push.Dialog.v2" timestamp="1615992060639">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="105" y="305" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1615904298333" />
+    <state x="105" y="305" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1615992060639" />
     <state x="791" y="486" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615979162530">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>

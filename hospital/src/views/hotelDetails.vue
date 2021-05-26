@@ -30,7 +30,7 @@
                     :title="room.type"
                           :num="room.free"
                     desc="40平方米 双床有窗"
-                    :thumb="require('../components/images/大床房.png')">
+                    :thumb="require('../components/images/dachuangfang.png')">
                 <template #num>
                     <van-button :id="room.type" @click="onOrder(room.type)"  type="danger" round>现在预订</van-button>
                 </template>

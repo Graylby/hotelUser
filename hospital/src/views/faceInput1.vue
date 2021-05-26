@@ -63,13 +63,6 @@
                 //       console.log(data)
                 //     }
                 // })
-
-
-
-
-
-
-
                 // this.$http.post('/uploadImage', {
                 //     params: {
                 //         imageFile: cameraPhoto
@@ -128,5 +121,4 @@
 <!--
 中文：、
 english:.
-
 -->

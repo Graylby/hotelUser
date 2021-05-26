@@ -2,7 +2,7 @@
   <header class="header">
     <slot name="left">
       <div class="return">
-        <van-icon color="white" size="40px" @click="$router.go(-1)" name="arrow-left"/>
+        <van-icon v-if="isReturn" color="white" size="40px" @click="$router.go(-1)" name="arrow-left"/>
       </div>
     </slot>
     <span class="header_title">
@@ -15,7 +15,8 @@
 <script>
   export default {
       props:{
-        title:String
+        title:String,
+        isReturn: {type:Boolean,default:true},
       },
       methods:{
       }

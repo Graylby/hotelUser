@@ -4,8 +4,10 @@
             <div class="camera-box">
                 <div class="camera-box-ca">
                     <div class="camera-box-in">
-                        <video class="camera" id="video" :width="videoWidth" :height="videoHeight" v-show="!imgSrc"></video>
-                        <canvas class="camera" id="canvas" :width="videoWidth" :height="videoHeight" v-show="imgSrc"></canvas>
+                        <div class="c-b-size">
+                            <video class="camera" id="video" style="width: 100%; height:100%; object-fit: fill" v-show="!imgSrc"></video>
+                            <canvas class="camera" id="canvas" style="width: 100%; height:100%; object-fit: fill" v-show="imgSrc"></canvas>
+                        </div>
                     </div>
                 </div>
                 <p class="camera-p">{{!imgSrc?'提示：请将人脸居中按"拍照"键确认':''}}</p>
@@ -22,8 +24,8 @@
     export default {
         data () {
             return {
-                videoWidth: '300',
-                videoHeight: '300',
+                videoWidth: '400',
+                videoHeight: '400',
                 thisCancas: null,
                 thisContext: null,
                 thisVideo: null,
@@ -32,15 +34,18 @@
             }
         },
         mounted() {
+            this.visible = true;
+            this.getCompetence()
         },
         methods: {
-            init () {
-                this.visible = true;
-                this.$nextTick(() => {
-                    this.getCompetence()
-                })
-            },
+            // init () {
+            //     this.visible = true;
+            //     this.$nextTick(() => {
+            //         this.getCompetence()
+            //     })
+            // },
             getCompetence() {
+                alert('进入成功')
                 // 初始化的时候直接让为空
                 this.imgSrc = '';
                 var _this = this;
@@ -107,6 +112,11 @@
 </script>
 
 <style scoped>
+    .c-b-size{
+        width: 70vw;
+        height: 70vw;
+        margin: 0 auto;
+    }
     .camera-box-ca{
         width: 100vw;
         height: 100vw;
@@ -116,7 +126,7 @@
         width: 300px;
     }
     .camera{
-        border-radius: 150px
+        border-radius: 35vw
     }
     .camera-p{
         text-align: center;

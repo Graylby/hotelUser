@@ -79,6 +79,13 @@ const routes = [
         title: '人脸录入',
         isMenu: false
     },
+    {
+        path: '/test',
+        name: '/test',
+        component: () => import('../views/panorama/panorama.vue'),
+        title: 'test',
+        isMenu: false
+    },
 
 
 ]

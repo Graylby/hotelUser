@@ -3,7 +3,7 @@
             :num="num"
             :price="goods.price"
             :title="goods.name"
-            :thumb="require('../components/goods/'+goods.name+'.jpg')"
+            :thumb="require('../components/goods/'+goods.img+'.jpg')"
     >
         <template #footer>
             <van-stepper v-model="value"
@@ -25,7 +25,8 @@
                 name,String,
                 num:String,
                 id:String,
-                isFake:Boolean
+                isFake:Boolean,
+                img:String
             }
         },
         data(){
@@ -33,7 +34,7 @@
                 value:0,
                 num:this.goods.num,
                 name:this.goods.name,
-                src:"require('../components/goods/伊利.jpg')",
+                src:"require('../components/goods/yili.jpg')",
               isLoad:false
             }
         },
