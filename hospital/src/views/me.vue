@@ -9,6 +9,7 @@
       <van-cell-group style="margin: 3vh 16px;border-radius: 5px">
         <van-cell class="c1" title="疫情信息登记" is-link to="infoInput"/>
         <van-cell class="c1" title="人脸录入" is-link to="faceInput"/>
+        <van-cell class="c1" title="我的订单" is-link to="myOrder"/>
       </van-cell-group>
       <div style="width: 80vw;margin: 0 10vw">
         <van-button @click="isLogout" round block type="danger">退出登录</van-button>

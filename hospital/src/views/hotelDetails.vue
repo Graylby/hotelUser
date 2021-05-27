@@ -3,10 +3,7 @@
         <header-top title="酒店详情"/>
         <div class="content">
             <van-cell-group style="margin: 2vh 0">
-                <van-image
-                    width="100vw"
-                    fit="contain"
-                    :src="require('../components/images/01.png')"/>
+                <panorama />
                 <van-cell
                         style="height: auto"
                         :title="hotel.name"
@@ -34,10 +31,13 @@
                 <template #num>
                     <van-button :id="room.type" @click="onOrder(room.type)"  type="danger" round>现在预订</van-button>
                 </template>
+                    <template #tags>
+                        <label>还剩{{room.free}}间</label>
+                    </template>
                 </van-card>
             </van-cell-group>
         </div>
-        <van-overlay :show="showOverlay">
+        <van-overlay z-index="100" :show="showOverlay">
             <face-input1 v-if="isLoad"  @status="status" :use="1" />
         </van-overlay>
     </div>
@@ -49,6 +49,7 @@
     import {getId} from "../api/login";
     import faceInput1 from "./faceInput1";
     import {orderHotel} from "../api/hotel";
+    import Panorama from "./panorama/panorama";
 
     export default {
         props:{
@@ -138,6 +139,7 @@
           },
         },
         components:{
+            Panorama,
             HeaderTop,
             faceInput1,
         }

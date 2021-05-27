@@ -1,6 +1,4 @@
 <template>
-    <div class="wrap">
-        <header-top :is-return="false" title="全景测试"/>
         <div class="global">
             <div :id="div"></div>
             <div class="noImg" v-if="imgShow">
@@ -8,21 +6,21 @@
                 <div>暂无全景图，请联系工作人员上传全景图</div>
             </div>
         </div>
-    </div>
 </template>
 
 <script>
     import {Viewer} from 'photo-sphere-viewer'
     import 'photo-sphere-viewer/dist/photo-sphere-viewer.css'
-    import HeaderTop from "../../components/HeaderTop";
     export default {
-        components: {HeaderTop},
+        props:{
+            imgUrl:{type:String,default:require('./test.jpeg')}
+        },
         data () {
             return {
                 //全景图配置
                 div:'panorama',
                 imgShow:false,
-                imgUrl:require('./test.jpeg'),
+                // imgUrl:require('./test.jpeg'),
                 panoramaData:'',
 
             }
@@ -36,43 +34,9 @@
                 const viewer = new Viewer({
                     container:this.div,
                     panorama:this.imgUrl,
-                    size:{
-                        width:'800',
-                        height:'500'
-                    }
                 })
                 console.log(viewer)
             },
-            // show(){
-            //     if(this.vrImg!="false"){
-            //         if(this.vrImg.indexOf('http')!=-1){
-            //             this.vrImg=this.vrImg.replace('http','https');
-            //             console.log("替换后",this.vrImg)
-            //         }
-            //         window.addEventListener('load',this.fun())
-            //         this.imgShow=false;
-            //     }else{
-            //         this.imgShow=true;
-            //     }
-            // },
-            // fun(){
-            //     let p;
-            //     p=PhotoSphereViewer({
-            //         container: this.div,
-            //         panorama: this.vrImg,
-            //         navbar:false,
-            //         zoom_level:100,
-            //         time_anim:false,
-            //         zoomRangeWidth:100,
-            //         default_fov:179,
-            //         fisheye:true,
-            //         loading_msg:"加载中",
-            //         size: {
-            //             width: '100%',
-            //             height: '100%'
-            //         }
-            //     });
-            // },
             handleGoBack () {
                 window.history.go(-1)
             }
@@ -81,6 +45,10 @@
 </script>
 <style lang="stylus" rel="stylesheet/stylus" scoped>
     @import "../../common/stylus/mixin.styl"
+    #panorama{
+        width 100vw!important;
+        height 60vw!important;
+    }
     .menu{
         /*border-color black*/
         /*border-radius 4vw*/
@@ -117,6 +85,9 @@
     .noImg div{
         font-size: .14rem;
         margin-top: 10px;
+    }
+    .psv-navbar{
+        display:none!important;
     }
 
 </style>

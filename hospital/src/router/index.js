@@ -86,6 +86,13 @@ const routes = [
         title: 'test',
         isMenu: false
     },
+    {
+        path: '/myOrder',
+        name: 'myOrder',
+        component: () => import('../views/phaseIi/myOrder'),
+        title: '我的订单',
+        isMenu: false
+    },
 
 
 ]
