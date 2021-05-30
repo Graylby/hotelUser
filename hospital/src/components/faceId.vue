@@ -5,8 +5,8 @@
                 <div class="camera-box-ca">
                     <div class="camera-box-in">
                         <div class="c-b-size">
-                            <video class="camera" id="video" style="width: 100%; height:100%; object-fit: fill" v-show="!imgSrc"></video>
-                            <canvas class="camera" id="canvas" style="width: 100%; height:100%; object-fit: fill" v-show="imgSrc"></canvas>
+                            <video ref="top" class="camera" id="video" style="width: 100%; height:100%; object-fit: fill" v-show="!imgSrc"></video>
+                            <canvas class="camera" id="canvas" :width="videoWidth" :height="videoHeight" v-show="imgSrc"></canvas>
                         </div>
                     </div>
                 </div>
@@ -24,16 +24,20 @@
     export default {
         data () {
             return {
-                videoWidth: '400',
-                videoHeight: '400',
+                videoWidth: '300',
+                videoHeight: '300',
                 thisCancas: null,
                 thisContext: null,
                 thisVideo: null,
                 imgSrc: '',
-                visible: false
+                visible: false,
+                isShutter:false
             }
         },
         mounted() {
+            let topHeight = this.$refs.top.offsetHeight
+            this.videoWidth = topHeight;
+            this.videoHeight = topHeight;
             this.visible = true;
             this.getCompetence()
         },
@@ -45,7 +49,6 @@
             //     })
             // },
             getCompetence() {
-                alert('进入成功')
                 // 初始化的时候直接让为空
                 this.imgSrc = '';
                 var _this = this;
@@ -101,6 +104,7 @@
                 // 获取图片base64链接
                 var image = this.thisCancas.toDataURL('image/png')
                 _this.imgSrc = image;
+                _this.isShutter = true
                 this.setFileUpload();
             },
             setFileUpload(){

@@ -22,9 +22,9 @@
                               :show-confirm="false"
                               @confirm="onConfirm" />
                 <van-card v-for="room in rooms"
-                    price="199"
+                    :price="room.type.price"
                     :key="room.index"
-                    :title="room.type"
+                    :title="room.type.name"
                           :num="room.free"
                     desc="40平方米 双床有窗"
                     :thumb="require('../components/images/dachuangfang.png')">
@@ -71,8 +71,8 @@
             this.hotel = this.$route.params.hotel
             console.log(this.hotel)
             this.date = this.hotel.date
-            getRoomList(this.id).then(data=>{
-                console.log(data.data.data)
+            const params = {id:this.hotel.id}
+            getRoomList(params).then(data=>{
                 this.rooms = data.data.data
             })
             getId().then(res=>{

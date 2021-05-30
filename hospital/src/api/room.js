@@ -2,10 +2,10 @@ import http from "../utils/request";
 /**
  * 获取类目
  */
-export const getRoomList = (data) => {
+export const getRoomList = (params) => {
     return http.request({
-        url:'/room/getRoomFreeList',
+        url:'/room/getRoomList',
         method:'get',
-        data
+        params
     })
 };

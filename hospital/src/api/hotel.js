@@ -31,3 +31,10 @@ export const service = (data) =>{
         data
     })
 }
+export const order = (params) =>{
+    return http.request({
+        url:'/reservation/user/getList',
+        method:'get',
+        params
+    })
+}

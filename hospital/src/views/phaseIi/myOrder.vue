@@ -2,23 +2,27 @@
     <div class="wrap">
         <header-top :is-return="true" title="我的订单"/>
         <div class="content">
-            <div>wddedingdan</div>
+            <order-item v-for="order in orders" room="标间" :time="order.perCheckinTime"/>
         </div>
     </div>
 </template>
 
 <script>
     import HeaderTop from "../../components/HeaderTop";
+    import {order} from "../../api/hotel";
+    import OrderItem from "../../components/orderItem";
     export default {
         name: "muOrder",
-        components: {HeaderTop},
+        components: {OrderItem, HeaderTop},
         data(){
             return{
-
+                orders:{},
             }
         },
         mounted() {
-
+            order().then((res)=>{
+                this.orders = res.data.data;
+            })
         }
     }
 </script>

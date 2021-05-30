@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/home.vue'
 import Login from '../views/login.vue'
 import store from "../store/index";
+import {getToken} from "../utils/auth";
 
 Vue.use(VueRouter);
 
@@ -59,9 +60,10 @@ const routes = [
         isMenu: false
     },
     {
-        path: '/hotel',
+        path: '/hotel/:id',
         name: '/hotel',
         component: () => import('../views/hotelDetails'),
+        props:true,
         title: '旅店详情',
         isMenu: false
     },
@@ -105,7 +107,7 @@ const router = new VueRouter({
 router.beforeEach((to, from, next)=>{
 
     if(to.name!=='login'){
-        if(store.state.token===''){
+        if(store.state.token===''&&getToken()!==''){
             next({name:'login'})
         }
     }

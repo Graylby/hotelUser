@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {getRefreshToken,  removeRefreshToken, removeToken, setRefreshToken, setToken} from '../auth'
+import {getRefreshToken, getToken, removeRefreshToken, removeToken, setRefreshToken, setToken} from '../auth'
 import {Dialog, Toast} from 'vant';
 import router from '../../router'
 import store from "../../store";
@@ -70,8 +70,9 @@ async function refreshToken_() {
 // 请求拦截器
 http.interceptors.request.use((config) => {
     // 如果有 token，则带上
+    const token = getToken();
+    // const token = store.state.token;
     // const token = getToken();
-    const token = store.state.token;
     if (token) {
         config.headers.Authorization = `Bearer ${token}`;
     }
