@@ -27,17 +27,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d49144d-6d25-4732-9047-f22b969ce2a2" name="Default Changelist" comment="already done">
-      <change afterPath="$PROJECT_DIR$/hospital/src/api/me.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/src/components/orderItem.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/api/hotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/api/hotel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/api/room.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/api/room.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/components/faceId.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/components/faceId.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/utils/request/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/utils/request/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hospital/src/views/hotelDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/hotelDetails.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/views/order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/order.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/views/phaseIi/myOrder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/phaseIi/myOrder.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +129,7 @@
       <workItem from="1621790209487" duration="1467000" />
       <workItem from="1621959015072" duration="10806000" />
       <workItem from="1622129955312" duration="717000" />
-      <workItem from="1622378590693" duration="12255000" />
+      <workItem from="1622378590693" duration="13926000" />
     </task>
     <task id="LOCAL-00001" summary="network error">
       <created>1615553672205</created>
@@ -189,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622130035248</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="剩商店和取消订单">
+      <created>1622400198530</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1622400198530</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +224,8 @@
     <MESSAGE value="last" />
     <MESSAGE value="全景图测试通过，差实战" />
     <MESSAGE value="订单没写" />
-    <option name="LAST_COMMIT_MESSAGE" value="订单没写" />
+    <MESSAGE value="剩商店和取消订单" />
+    <option name="LAST_COMMIT_MESSAGE" value="剩商店和取消订单" />
   </component>
   <component name="WindowStateProjectService">
     <state x="190" y="243" key="#build" timestamp="1622130068017">
@@ -269,10 +268,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="556" y="221" key="SettingsEditor/0.0.2048.1152@0.0.2048.1152" timestamp="1615979714116" />
-    <state x="105" y="305" key="Vcs.Push.Dialog.v2" timestamp="1622130041218">
+    <state x="105" y="305" key="Vcs.Push.Dialog.v2" timestamp="1622400205702">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="105" y="305" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1622130041218" />
+    <state x="105" y="305" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1622400205702" />
     <state x="791" y="486" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615979162530">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>

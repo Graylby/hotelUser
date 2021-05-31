@@ -23,13 +23,13 @@
                               @confirm="onConfirm" />
                 <van-card v-for="room in rooms"
                     :price="room.type.price"
-                    :key="room.index"
+                    :key="room.type.id"
                     :title="room.type.name"
                           :num="room.free"
                     desc="40平方米 双床有窗"
                     :thumb="require('../components/images/dachuangfang.png')">
                 <template #num>
-                    <van-button :id="room.type" @click="onOrder(room.type)"  type="danger" round>现在预订</van-button>
+                    <van-button :id="room.type" @click="onOrder(room.type.id)"  type="danger" round>现在预订</van-button>
                 </template>
                     <template #tags>
                         <label>还剩{{room.free}}间</label>
@@ -64,6 +64,7 @@
                 rooms:[],
                 long:0,
                 user:{},
+                roomId:'',
               isLoad:false
             }
         },
@@ -91,7 +92,8 @@
                 this.long = (date[1]-date[0])/86400000
                 console.log(this.long)
             },
-            onOrder(){
+            onOrder(id){
+                this.roomId = id;
                 if (this.user.face){
                     console.log(1)
                 }else {
@@ -119,9 +121,11 @@
           creatOrder(){
               let user = this.user
               let hotel = this.hotel
+              let id = this.roomId;
               let data = {
                 hotelId:hotel.id,
-                type:'234',
+                type:id,
+                orderType:1,
                 userId:user.id,
                   lengthOfStay:5,
                   perCheckinTime:'2020-02-23 00:00:00'
