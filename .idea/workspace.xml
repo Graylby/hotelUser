@@ -28,7 +28,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4d49144d-6d25-4732-9047-f22b969ce2a2" name="Default Changelist" comment="already done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/views/hotelDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/hotelDetails.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,7 @@
       <recent name="F:\Project\Vue_project\github\hotelUser-main\hospital\src\components\goods" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.serve">
+  <component name="RunManager" selected="npm.build">
     <configuration name="build" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/hospital/package.json" />
       <command value="run" />
@@ -129,7 +128,7 @@
       <workItem from="1621790209487" duration="1467000" />
       <workItem from="1621959015072" duration="10806000" />
       <workItem from="1622129955312" duration="717000" />
-      <workItem from="1622378590693" duration="13926000" />
+      <workItem from="1622378590693" duration="14335000" />
     </task>
     <task id="LOCAL-00001" summary="network error">
       <created>1615553672205</created>
@@ -187,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622400198530</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="剩商店">
+      <created>1622433499798</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1622433499798</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +231,8 @@
     <MESSAGE value="全景图测试通过，差实战" />
     <MESSAGE value="订单没写" />
     <MESSAGE value="剩商店和取消订单" />
-    <option name="LAST_COMMIT_MESSAGE" value="剩商店和取消订单" />
+    <MESSAGE value="剩商店" />
+    <option name="LAST_COMMIT_MESSAGE" value="剩商店" />
   </component>
   <component name="WindowStateProjectService">
     <state x="190" y="243" key="#build" timestamp="1622130068017">
@@ -248,30 +255,30 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="217" y="317" key="FileChooserDialogImpl/0.0.2048.1152@0.0.2048.1152" timestamp="1618304135185" />
-    <state width="1004" height="164" key="GridCell.Tab.0.bottom" timestamp="1622130884624">
+    <state width="1005" height="508" key="GridCell.Tab.0.bottom" timestamp="1622433900309">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1004" height="164" key="GridCell.Tab.0.bottom/0.0.2048.1152@0.0.2048.1152" timestamp="1622130884624" />
-    <state width="1004" height="164" key="GridCell.Tab.0.center" timestamp="1622130884623">
+    <state width="1005" height="508" key="GridCell.Tab.0.bottom/0.0.2048.1152@0.0.2048.1152" timestamp="1622433900309" />
+    <state width="1005" height="508" key="GridCell.Tab.0.center" timestamp="1622433900309">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1004" height="164" key="GridCell.Tab.0.center/0.0.2048.1152@0.0.2048.1152" timestamp="1622130884623" />
-    <state width="1004" height="164" key="GridCell.Tab.0.left" timestamp="1622130884623">
+    <state width="1005" height="508" key="GridCell.Tab.0.center/0.0.2048.1152@0.0.2048.1152" timestamp="1622433900309" />
+    <state width="1005" height="508" key="GridCell.Tab.0.left" timestamp="1622433900309">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1004" height="164" key="GridCell.Tab.0.left/0.0.2048.1152@0.0.2048.1152" timestamp="1622130884623" />
-    <state width="1004" height="164" key="GridCell.Tab.0.right" timestamp="1622130884623">
+    <state width="1005" height="508" key="GridCell.Tab.0.left/0.0.2048.1152@0.0.2048.1152" timestamp="1622433900309" />
+    <state width="1005" height="508" key="GridCell.Tab.0.right" timestamp="1622433900309">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1004" height="164" key="GridCell.Tab.0.right/0.0.2048.1152@0.0.2048.1152" timestamp="1622130884623" />
+    <state width="1005" height="508" key="GridCell.Tab.0.right/0.0.2048.1152@0.0.2048.1152" timestamp="1622433900309" />
     <state x="556" y="221" key="SettingsEditor" timestamp="1615979714116">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="556" y="221" key="SettingsEditor/0.0.2048.1152@0.0.2048.1152" timestamp="1615979714116" />
-    <state x="105" y="305" key="Vcs.Push.Dialog.v2" timestamp="1622400205702">
+    <state x="105" y="305" key="Vcs.Push.Dialog.v2" timestamp="1622433861761">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="105" y="305" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1622400205702" />
+    <state x="105" y="305" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1622433861761" />
     <state x="791" y="486" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615979162530">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>

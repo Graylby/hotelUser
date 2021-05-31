@@ -2,7 +2,7 @@
     <div class="wrap">
         <header-top :is-return="true" title="我的订单"/>
         <div class="content">
-            <order-item v-for="order in orders" room="标间" :time="order.perCheckinTime"/>
+            <order-item v-for="(order,index) in orders" :key="index" room="标间" :time="order.perCheckinTime"/>
         </div>
     </div>
 </template>
