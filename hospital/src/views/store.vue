@@ -5,58 +5,71 @@
             <div class="bar">
                 <van-sidebar class="van-sidebar" v-model="activeKey" @change="onChange">
                   <van-sidebar-item title="猜你喜欢"/>
-                  <van-sidebar-item title="零食"/>
-                    <van-sidebar-item title="饮料"/>
-                    <van-sidebar-item title="啤酒"/>
-                    <van-sidebar-item title="酸奶"/>
-                    <van-sidebar-item title="牛奶"/>
+                  <van-sidebar-item v-for="item1 in types"
+                                      :key="item1"
+                                      :title="item1"/>
+<!--                  <van-sidebar-item title="零食"/>-->
+<!--                    <van-sidebar-item title="饮料"/>-->
+<!--                    <van-sidebar-item title="啤酒"/>-->
+<!--                    <van-sidebar-item title="酸奶"/>-->
+<!--                    <van-sidebar-item title="牛奶"/>-->
                 </van-sidebar>
             </div>
-            <div v-show="activeKey === 1" class="goods">
-                <goods v-for="item in goods[0]"
+            <div v-for="(type,index) in types"
+                 v-show="index+1 === activeKey"
+                 :key="type"
+                 class="goods">
+                <goods v-for="item in newGoods[index]"
                        @goodsNum="changeNum"
                        :ref="item.id"
                        :key="item.id"
                        :goods="item"/>
             </div>
-            <div v-show="activeKey === 2" class="goods">
-                <goods v-for="item in goods[1]"
-                       @goodsNum="changeNum"
-                       :key="item.id"
-                       :ref="item.id"
-                       :goods="item"/>
-            </div>
-            <div v-show="activeKey === 3" class="goods">
-                <goods v-for="item in goods[2]"
-                       @goodsNum="changeNum"
-                       :key="item.id"
-                       :ref="item.id"
-                       :goods="item"/>
-            </div>
-            <div v-show="activeKey === 4" class="goods">
-                <goods v-for="item in goods[3]"
-                       @goodsNum="changeNum"
-                       :key="item.id"
-                       :ref="item.id"
-                       :goods="item"/>
-            </div>
-            <div v-show="activeKey === 5" class="goods">
-                <goods v-for="item in goods[4]"
-                       @goodsNum="changeNum"
-                       :key="item.id"
-                       :ref="item.id"
-                       :goods="item"/>
-            </div>
-            <div v-show="activeKey === 0" class="goods">
+<!--            <div v-show="activeKey === 1" class="goods">-->
+<!--                <goods v-for="item in goods[0]"-->
+<!--                       @goodsNum="changeNum"-->
+<!--                       :ref="item.id"-->
+<!--                       :key="item.id"-->
+<!--                       :goods="item"/>-->
+<!--            </div>-->
+<!--            <div v-show="activeKey === 2" class="goods">-->
+<!--                <goods v-for="item in goods[1]"-->
+<!--                       @goodsNum="changeNum"-->
+<!--                       :key="item.id"-->
+<!--                       :ref="item.id"-->
+<!--                       :goods="item"/>-->
+<!--            </div>-->
+<!--            <div v-show="activeKey === 3" class="goods">-->
+<!--                <goods v-for="item in goods[2]"-->
+<!--                       @goodsNum="changeNum"-->
+<!--                       :key="item.id"-->
+<!--                       :ref="item.id"-->
+<!--                       :goods="item"/>-->
+<!--            </div>-->
+<!--            <div v-show="activeKey === 4" class="goods">-->
+<!--                <goods v-for="item in goods[3]"-->
+<!--                       @goodsNum="changeNum"-->
+<!--                       :key="item.id"-->
+<!--                       :ref="item.id"-->
+<!--                       :goods="item"/>-->
+<!--            </div>-->
+<!--            <div v-show="activeKey === 5" class="goods">-->
 <!--                <goods v-for="item in goods[4]"-->
 <!--                       @goodsNum="changeNum"-->
 <!--                       :key="item.id"-->
 <!--                       :ref="item.id"-->
 <!--                       :goods="item"/>-->
-              <goods :goods="cart[round[0]]" :isFake="false" />
-              <goods :goods="cart[round[1]]" :isFake="false"/>
-              <goods :goods="cart[round[2]]" :isFake="false"/>
-            </div>
+<!--            </div>-->
+<!--            <div v-show="activeKey === 0" class="goods">-->
+<!--&lt;!&ndash;                <goods v-for="item in goods[4]"&ndash;&gt;-->
+<!--&lt;!&ndash;                       @goodsNum="changeNum"&ndash;&gt;-->
+<!--&lt;!&ndash;                       :key="item.id"&ndash;&gt;-->
+<!--&lt;!&ndash;                       :ref="item.id"&ndash;&gt;-->
+<!--&lt;!&ndash;                       :goods="item"/>&ndash;&gt;-->
+<!--              <goods :goods="cart[round[0]]" :isFake="false" />-->
+<!--              <goods :goods="cart[round[1]]" :isFake="false"/>-->
+<!--              <goods :goods="cart[round[2]]" :isFake="false"/>-->
+<!--            </div>-->
             </div>
         <div class="cart"  @click="onCart">
             <van-icon
@@ -68,13 +81,13 @@
 
             <div>
                 <van-card class="goods-card"
-                        v-for="item in cart"
+                        v-for="(item,index) in newCart"
                         v-show="item.num"
-                        :key="item.id"
+                        :key="index"
                         :title="item.name"
                         :num="item.num"
                         :price="item.price"
-                        :thumb="require('../components/goods/'+item.img+'.jpg')"
+                        :thumb="item.thumb"
                 />
                 <van-cell>1</van-cell>
                 <van-submit-bar
@@ -90,11 +103,13 @@
     import HeaderTop from '../components/HeaderTop'
     import goods from "../components/goods";
     import {getId} from "../api/login";
+    import {getGoodList, getShopType} from "../api/shop";
 
     export default {
         data() {
             return {
                 activeKey:0,
+                types:[],
                 goods:[
                     [
                     {
@@ -233,6 +248,7 @@
                         },
                     ],
                 ],
+                newGoods:[],
                 cart:[
 
                         {
@@ -371,10 +387,28 @@
                         },
 
                 ],
+                newCart:[],
                 show:false,
-                total:0,
                 id:null,
-                round:[0,0,0]
+                round:[0,0,0],
+                defaultTotal:0,
+            }
+        },
+        watch:{
+            activeKey(val){
+                this.getGoods(this.types[val-1])
+            },
+            newCart(){
+
+            }
+        },
+        computed:{
+            total(){
+                let total=this.defaultTotal;
+                for (let x in this.newCart) {
+                    total+=this.newCart[x].price*this.newCart[x].num;
+                }
+                return total*100;
             }
         },
         mounted(){
@@ -382,11 +416,22 @@
                 console.log(data)
                 this.id = data.data.data.id
             })
+            getShopType().then(res=>{
+                this.types = res.data.data;
+                for(let x in this.types){
+                    this.getGoods(this.types[x],x)
+                }
+            })
           this.suiji_shu()
           console.log('随机数组'+this.round)
-
         },
         methods:{
+            getGoods(type,index){
+                let params = {type:type};
+                getGoodList(params).then(res=>{
+                    this.newGoods[index] = res.data.data;
+              })
+            },
           suiji_shu(){
             for (let i=0;i<3;i++){
               let array = this.round
@@ -421,7 +466,15 @@
                 })
             },
             changeNum(goods){
-                this.$set(this.cart[goods.id-1],"num",goods.num)
+                let cart = this.newCart;
+                for (let x in cart) {
+                    if (goods.name === cart[x].name){
+                        cart[x].num++;
+                        this.newCart = cart;
+                        return;
+                    }
+                }
+                this.newCart.push(goods);
             }
         },
         components:{

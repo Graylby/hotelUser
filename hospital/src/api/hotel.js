@@ -24,6 +24,13 @@ export const orderHotel = (data) => {
         data
     })
 }
+export const orderCancel = (data) => {
+    return http.request({
+        url:'/reservation/cancel',
+        method:'post',
+        data
+    })
+}
 export const service = (data) =>{
     return http.request({
         url:'/task/create',
@@ -33,7 +40,7 @@ export const service = (data) =>{
 }
 export const order = (params) =>{
     return http.request({
-        url:'/reservation/user/getList',
+        url:'/reservation/user/getListOK',
         method:'get',
         params
     })

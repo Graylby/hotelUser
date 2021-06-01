@@ -70,8 +70,7 @@ async function refreshToken_() {
 // 请求拦截器
 http.interceptors.request.use((config) => {
     // 如果有 token，则带上
-    const token = getToken();
-    // const token = store.state.token;
+    const token=(store.state.token)?store.state.token:getToken()
     // const token = getToken();
     if (token) {
         config.headers.Authorization = `Bearer ${token}`;

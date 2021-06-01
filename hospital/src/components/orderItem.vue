@@ -6,12 +6,14 @@
                 <label>预计入住时间：{{time}}</label>
         </div>
         <div style="margin-right: 10px">
-            <van-button @click="deleteOrder" type="danger">取消订单</van-button>
+            <van-button @click="deleteOrder" round type="danger">取消订单</van-button>
         </div>
     </div>
 </template>
 
 <script>
+    import {orderCancel} from "../api/hotel";
+
     export default {
         name: "orderItem",
         props:{
@@ -25,7 +27,12 @@
                 this.$dialog.confirm({
                     message:'确认要取消订单？'
                 }).then(()=>{
-                    alert('shanchuchenggong')
+                    let message = '已取消订单';
+                    orderCancel({id:this.id}).then((res)=>{
+                        console.log(res)
+                        this.$notify({type:'success',message:message,duration:1000})
+                        this.$emit('refresh')
+                    })
                 })
             }
         }
@@ -35,6 +42,7 @@
 <style scoped>
 .text{
     font-family: 微软雅黑;
+    box-shadow: 0 0 10px lightgrey;
 }
     label{
         padding: 3px 0;

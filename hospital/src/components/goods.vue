@@ -1,9 +1,9 @@
 <template>
     <van-card v-if="isLoad"
-            :num="num"
+            :num="goods.num"
             :price="goods.price"
             :title="goods.name"
-            :thumb="require('../components/goods/'+goods.img+'.jpg')"
+            :thumb="goods.img_url"
     >
         <template #footer>
             <van-stepper v-model="value"
@@ -48,9 +48,11 @@
         },
         methods:{
             onChange(){
-                let msg ={
+                let msg = {
+                    name:this.goods.name,
                     num:this.value,
-                    id:this.goods.id
+                    price:this.goods.price,
+                    thumb:this.goods.img_url,
                 }
                 this.$emit('goodsNum',msg)
             }

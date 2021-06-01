@@ -2,7 +2,12 @@
     <div class="wrap">
         <header-top :is-return="true" title="我的订单"/>
         <div class="content">
-            <order-item v-for="(order,index) in orders" :key="index" room="标间" :time="order.perCheckinTime"/>
+            <order-item @refresh="refreshOrder" v-for="(order,index) in orders"
+                        :key="index"
+                        :name="order.hotelInfo.name"
+                        :room="order.typeInfo.name"
+                        :id="order.id"
+                        :time="order.perCheckinTime"/>
         </div>
     </div>
 </template>
@@ -20,9 +25,14 @@
             }
         },
         mounted() {
-            order().then((res)=>{
-                this.orders = res.data.data;
-            })
+            this.refreshOrder();
+        },
+        methods:{
+            refreshOrder(){
+                order().then((res)=>{
+                    this.orders = res.data.data;
+                })
+            }
         }
     }
 </script>
