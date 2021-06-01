@@ -27,13 +27,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d49144d-6d25-4732-9047-f22b969ce2a2" name="Default Changelist" comment="already done">
-      <change afterPath="$PROJECT_DIR$/hospital/src/components/comment.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hospital/src/views/phaseIi/comments.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/api/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/api/shop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/views/order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/order.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +132,7 @@
       <workItem from="1622433945048" duration="1230000" />
       <workItem from="1622514711222" duration="2863000" />
       <workItem from="1622524919169" duration="6779000" />
-      <workItem from="1622554713884" duration="5462000" />
+      <workItem from="1622554713884" duration="9198000" />
     </task>
     <task id="LOCAL-00001" summary="network error">
       <created>1615553672205</created>
@@ -217,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622554806370</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="评论好了">
+      <created>1622560388477</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1622560388477</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +259,8 @@
     <MESSAGE value="剩商店" />
     <MESSAGE value="debug" />
     <MESSAGE value="购物差提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="购物差提交" />
+    <MESSAGE value="评论好了" />
+    <option name="LAST_COMMIT_MESSAGE" value="评论好了" />
   </component>
   <component name="WindowStateProjectService">
     <state x="190" y="243" key="#build" timestamp="1622130068017">
@@ -349,10 +351,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="556" y="221" key="SettingsEditor/0.0.2048.1152@0.0.2048.1152" timestamp="1615979714116" />
-    <state x="105" y="305" key="Vcs.Push.Dialog.v2" timestamp="1622554808477">
+    <state x="105" y="305" key="Vcs.Push.Dialog.v2" timestamp="1622560393672">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="105" y="305" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1622554808477" />
+    <state x="105" y="305" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1622560393672" />
     <state x="791" y="486" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615979162530">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
