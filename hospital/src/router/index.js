@@ -95,6 +95,13 @@ const routes = [
         title: '我的订单',
         isMenu: false
     },
+    {
+        path: '/comments',
+        name: 'comments',
+        component: () => import('../views/phaseIi/comments'),
+        title: '评价',
+        isMenu: false
+    },
 
 
 ]

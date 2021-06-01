@@ -13,6 +13,9 @@
                     <van-cell id="预约澡堂" title="预约澡堂" is-link @click="sendsService(1)"/>
                     <van-cell id="呼叫服务生" title="呼叫服务生" is-link @click="sendsService(2)"/>
                 </van-cell-group>
+                <van-cell-group title="查看评价">
+                    <van-cell id="评论" title="查看评价" is-link @click="onComments"/>
+                </van-cell-group>
             </div>
         </div>
     </div>
@@ -39,6 +42,9 @@
             onStore(){
                 this.$router.push('/store')
         },
+            onComments(){
+                this.$router.push('/comments')
+            },
           sendsService(index){
             this.$dialog.confirm({
               message: '是否确认选择'+this.information[index]+'服务',

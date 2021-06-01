@@ -27,15 +27,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d49144d-6d25-4732-9047-f22b969ce2a2" name="Default Changelist" comment="already done">
-      <change afterPath="$PROJECT_DIR$/hospital/src/api/shop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hospital/src/components/comment.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hospital/src/views/phaseIi/comments.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/api/hotel.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/api/hotel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/components/goods.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/components/orderItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/components/orderItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/utils/request/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/utils/request/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/views/phaseIi/myOrder.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/phaseIi/myOrder.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hospital/src/views/store.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/store.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/api/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/api/shop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/order.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +43,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -140,6 +138,7 @@
       <workItem from="1622433945048" duration="1230000" />
       <workItem from="1622514711222" duration="2863000" />
       <workItem from="1622524919169" duration="6779000" />
+      <workItem from="1622554713884" duration="5462000" />
     </task>
     <task id="LOCAL-00001" summary="network error">
       <created>1615553672205</created>
@@ -211,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622434103186</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="购物差提交">
+      <created>1622554806370</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1622554806370</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +257,8 @@
     <MESSAGE value="剩商店和取消订单" />
     <MESSAGE value="剩商店" />
     <MESSAGE value="debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug" />
+    <MESSAGE value="购物差提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="购物差提交" />
   </component>
   <component name="WindowStateProjectService">
     <state x="190" y="243" key="#build" timestamp="1622130068017">
@@ -274,22 +281,22 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="217" y="317" key="FileChooserDialogImpl/0.0.2048.1152@0.0.2048.1152" timestamp="1618304135185" />
-    <state width="1005" height="148" key="GridCell.Tab.0.bottom" timestamp="1622539651686">
+    <state width="1005" height="148" key="GridCell.Tab.0.bottom" timestamp="1622555125990">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1005" height="148" key="GridCell.Tab.0.bottom/0.0.2048.1152@0.0.2048.1152" timestamp="1622539651686" />
-    <state width="1005" height="148" key="GridCell.Tab.0.center" timestamp="1622539651686">
+    <state width="1005" height="148" key="GridCell.Tab.0.bottom/0.0.2048.1152@0.0.2048.1152" timestamp="1622555125990" />
+    <state width="1005" height="148" key="GridCell.Tab.0.center" timestamp="1622555125990">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1005" height="148" key="GridCell.Tab.0.center/0.0.2048.1152@0.0.2048.1152" timestamp="1622539651686" />
-    <state width="1005" height="148" key="GridCell.Tab.0.left" timestamp="1622539651686">
+    <state width="1005" height="148" key="GridCell.Tab.0.center/0.0.2048.1152@0.0.2048.1152" timestamp="1622555125990" />
+    <state width="1005" height="148" key="GridCell.Tab.0.left" timestamp="1622555125989">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1005" height="148" key="GridCell.Tab.0.left/0.0.2048.1152@0.0.2048.1152" timestamp="1622539651686" />
-    <state width="1005" height="148" key="GridCell.Tab.0.right" timestamp="1622539651686">
+    <state width="1005" height="148" key="GridCell.Tab.0.left/0.0.2048.1152@0.0.2048.1152" timestamp="1622555125989" />
+    <state width="1005" height="148" key="GridCell.Tab.0.right" timestamp="1622555125990">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1005" height="148" key="GridCell.Tab.0.right/0.0.2048.1152@0.0.2048.1152" timestamp="1622539651686" />
+    <state width="1005" height="148" key="GridCell.Tab.0.right/0.0.2048.1152@0.0.2048.1152" timestamp="1622555125990" />
     <state width="1005" height="371" key="GridCell.Tab.1.bottom" timestamp="1622435176123">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -342,10 +349,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="556" y="221" key="SettingsEditor/0.0.2048.1152@0.0.2048.1152" timestamp="1615979714116" />
-    <state x="105" y="305" key="Vcs.Push.Dialog.v2" timestamp="1622434155493">
+    <state x="105" y="305" key="Vcs.Push.Dialog.v2" timestamp="1622554808477">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="105" y="305" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1622434155493" />
+    <state x="105" y="305" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1622554808477" />
     <state x="791" y="486" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615979162530">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>

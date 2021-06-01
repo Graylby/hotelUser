@@ -16,3 +16,17 @@ export const getGoodList = (params) => {
         params
     })
 };
+export const getComments = (params) =>{
+    return http.request({
+        url:'/comment/get',
+        method:'get',
+        params
+    })
+}
+export const insertComment = (data) =>{
+    return http.request({
+        url:'/comment/insert',
+        method:'post',
+        data
+    })
+}

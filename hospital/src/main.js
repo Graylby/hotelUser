@@ -13,7 +13,7 @@ Vue.prototype.$PhotoSphereViewer = PhotoSphereViewer // 引入全景图
 Vue.config.productionTip = false
 
 Vue.use(utils)
-import { Sidebar,Notify,Overlay,Uploader,Row,Col,Dialog,SubmitBar,ActionSheet,SidebarItem,Stepper,AddressList,Image as VanImage,List,Card,Button,Popup,Calendar,Cell,CellGroup,Field,Form,Icon,Swipe, SwipeItem,Picker } from 'vant';
+import { Sidebar,Notify,Rate,Overlay,Uploader,Row,Col,Dialog,SubmitBar,ActionSheet,SidebarItem,Stepper,AddressList,Image as VanImage,List,Card,Button,Popup,Calendar,Cell,CellGroup,Field,Form,Icon,Swipe, SwipeItem,Picker } from 'vant';
 Vue.use(Notify)
 Vue.use(Overlay)
 Vue.use(Uploader)
@@ -40,6 +40,7 @@ Vue.use(Form)
 Vue.use(Swipe)
 Vue.use(SwipeItem)
 Vue.use(Picker)
+Vue.use(Rate)
 new Vue({
   router,
   store,
