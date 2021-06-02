@@ -21,9 +21,10 @@
                         rows="2"
                         autosize
                         label="评价"
+                        label-width="40px"
                         type="textarea"
                         maxlength="50"
-                        placeholder="请输入评价"
+                        placeholder="    请输入评价"
                         show-word-limit
                 />
             </div>
@@ -93,7 +94,7 @@
 </script>
 
 
-<style lang="stylus" rel="stylesheet/stylus" scoped>
+<style lang="stylus" rel="stylesheet/stylus">
     @import "../../common/stylus/mixin.styl";
 .bottom{
     position fixed;
@@ -106,5 +107,8 @@
         overflow: scroll;
         top: 45px;
         bottom 130px
+    }
+    .van-field__control{
+        background #f4f5f7!important;
     }
 </style>

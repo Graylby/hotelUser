@@ -25,7 +25,8 @@
 .commentsCard{
     width: 90%;
     margin: 10px auto;
-    box-shadow: 0 0 10px darkgrey;
+    box-shadow: 0 0 10px lightgrey;
+    background: #FFFFFF;
 }
     .textBox{
         color: darkgrey;

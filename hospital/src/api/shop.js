@@ -30,3 +30,17 @@ export const insertComment = (data) =>{
         data
     })
 }
+export const getGuess = (params) =>{
+    return http.request({
+        url:'/good/guess',
+        method:'get',
+        params
+    })
+}
+export const onSubmit = (data) =>{
+    return http.request({
+        url:'/shopCart/creat',
+        method:'post',
+        data
+    })
+}

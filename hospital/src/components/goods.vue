@@ -53,6 +53,7 @@
                     num:this.value,
                     price:this.goods.price,
                     thumb:this.goods.img_url,
+                    id:this.goods.id
                 }
                 this.$emit('goodsNum',msg)
             }

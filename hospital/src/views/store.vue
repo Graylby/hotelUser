@@ -1,6 +1,6 @@
 <template>
     <div class="wrap">
-        <header-top title="店内商店"/>
+        <header-top class="top" title="店内商店"/>
         <div class="content">
             <div class="bar">
                 <van-sidebar class="van-sidebar" v-model="activeKey" @change="onChange">
@@ -20,6 +20,16 @@
                  :key="type"
                  class="goods">
                 <goods v-for="item in newGoods[index]"
+                       @goodsNum="changeNum"
+                       :ref="item.id"
+                       :key="item.id"
+                       :goods="item"/>
+            </div>
+            <div class="goods" v-show="activeKey===0">
+                <div v-if="isLoading" style="margin: 250px auto;width: 50px">
+                    <van-loading color="#1989fa" size="50px" />
+                </div>
+                <goods v-for="item in like"
                        @goodsNum="changeNum"
                        :ref="item.id"
                        :key="item.id"
@@ -103,7 +113,7 @@
     import HeaderTop from '../components/HeaderTop'
     import goods from "../components/goods";
     import {getId} from "../api/login";
-    import {getGoodList, getShopType} from "../api/shop";
+    import {getGoodList, getGuess, getShopType, onSubmit} from "../api/shop";
 
     export default {
         data() {
@@ -388,10 +398,12 @@
 
                 ],
                 newCart:[],
+                like:[],
                 show:false,
                 id:null,
                 round:[0,0,0],
                 defaultTotal:0,
+                isLoading:true
             }
         },
         watch:{
@@ -421,6 +433,10 @@
                 for(let x in this.types){
                     this.getGoods(this.types[x],x)
                 }
+                getGuess({hotelId:1,num:10}).then(res=>{
+                    this.like = res.data.data;
+                    this.isLoading = false
+                })
             })
           this.suiji_shu()
           console.log('随机数组'+this.round)
@@ -455,14 +471,29 @@
                 }
             },
             onSubmit(){
-                this.show=false
-                this.$dialog.alert({
-                    title:'成功下单',
-                    message:'商品已成功下单，马上为您送达！',
-                    theme:'round-button',
-                }).then(()=>{
-                    console.log(this.show)
-                  this.$router.back()
+                let goods=[]
+                for (let x in this.newCart){
+                    let item = {
+                        id:this.newCart[x].id,
+                        num:this.newCart[x].num
+                    }
+                    goods.push(item)
+                }
+                let dada={
+                    id:1,
+                    hotelId: 1,
+                    goods:goods,
+                }
+                onSubmit(dada).then(()=>{
+                    this.show=false
+                    this.$dialog.alert({
+                        title:'成功下单',
+                        message:'商品已成功下单，马上为您送达！',
+                        theme:'round-button',
+                    }).then(()=>{
+                        console.log(this.show)
+                        this.$router.back()
+                    })
                 })
             },
             changeNum(goods){
@@ -494,10 +525,15 @@
         width 80px
         height 100vh
         margin-right 10px
+        position fixed
+        top 45px
     }
     .goods{
-        float right
         width 75vw
+        position absolute
+        right 0
+        top 45px
+        overflow scroll
     }
     .cart{
         width 15vw
@@ -511,5 +547,8 @@
     }
     .goods-card{
         font size 29
+    }
+    .top{
+        position fixed
     }
 </style>

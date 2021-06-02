@@ -50,6 +50,7 @@
     import faceInput1 from "./faceInput1";
     import {orderHotel} from "../api/hotel";
     import Panorama from "./panorama/panorama";
+    import store from "../store";
 
     export default {
         props:{
@@ -89,8 +90,11 @@
                 this.show = false;
                 this.date = `${this.formatDate(start)} - ${this.formatDate(end)}`;
                 console.log((date[1]-date[0])/86400000)
-                this.long = (date[1]-date[0])/86400000
-                console.log(this.long)
+                this.length = (date[1]-date[0])/86400000;
+                let perDate = this.formatDate(start)
+                console.log(perDate)
+                store.commit('setLength',this.length);
+                store.commit('setDate',perDate)
             },
             onOrder(id){
                 this.roomId = id;
@@ -122,13 +126,20 @@
               let user = this.user
               let hotel = this.hotel
               let id = this.roomId;
+              let myDate = store.state.preDate;
+              let obj = myDate.split('/');
+              let string
+              if (obj[0]<10&&obj[1]<10) string = '2021-0'+obj[0]+'-0'+obj[1]+' 12:00:00'
+              else if (obj[0]<10) string = '2021-0'+obj[0]+'-'+obj[1]+' 12:00:00'
+              else if (obj[1]<10) string = '2021-'+obj[0]+'-0'+obj[1]+' 12:00:00'
+              else string = '2021-'+obj[0]+'-'+obj[1]+' 12:00:00'
               let data = {
                 hotelId:hotel.id,
                 type:id,
                 orderType:1,
                 userId:user.id,
-                  lengthOfStay:5,
-                  perCheckinTime:'2020-02-23 00:00:00'
+                  lengthOfStay:store.state.length,
+                  perCheckinTime:string
               }
             console.log("创建订单传输的数据：",data)
               //下面代码记得删

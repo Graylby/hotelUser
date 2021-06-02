@@ -27,7 +27,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d49144d-6d25-4732-9047-f22b969ce2a2" name="Default Changelist" comment="already done">
+      <change afterPath="$PROJECT_DIR$/hospital/src/assets/fakePage/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hospital/src/assets/fakePage/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hospital/src/assets/fakePage/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hospital/src/assets/fakePage/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hospital/src/assets/fakePage/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hospital/src/assets/fakePage/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/api/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/api/shop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/comment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/components/comment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/components/goods.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/components/goods.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/hotelDetails.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/hotelDetails.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/phaseIi/comments.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/phaseIi/comments.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hospital/src/views/store.vue" beforeDir="false" afterPath="$PROJECT_DIR$/hospital/src/views/store.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +71,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../aifactory" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hospital/src/assets/fakePage" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -63,7 +79,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Project\Vue_project\github\hotelUser-main\hospital\src\assets\fakePage" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Project\Vue_project\github\hotelUser-main\hospital\src\assets\fakePage" />
       <recent name="F:\Project\Vue_project\github\hotelUser-main\hospital\src\views\panorama" />
       <recent name="F:\Project\Vue_project\github\hotelUser-main\hospital\src\components\images" />
       <recent name="F:\Project\Vue_project\github\hotelUser-main\hospital\src\components\goods" />
@@ -132,7 +152,8 @@
       <workItem from="1622433945048" duration="1230000" />
       <workItem from="1622514711222" duration="2863000" />
       <workItem from="1622524919169" duration="6779000" />
-      <workItem from="1622554713884" duration="9198000" />
+      <workItem from="1622554713884" duration="9262000" />
+      <workItem from="1622613776782" duration="14384000" />
     </task>
     <task id="LOCAL-00001" summary="network error">
       <created>1615553672205</created>
@@ -218,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622560388477</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="都几把通了">
+      <created>1622569349470</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1622569349470</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +288,8 @@
     <MESSAGE value="debug" />
     <MESSAGE value="购物差提交" />
     <MESSAGE value="评论好了" />
-    <option name="LAST_COMMIT_MESSAGE" value="评论好了" />
+    <MESSAGE value="都几把通了" />
+    <option name="LAST_COMMIT_MESSAGE" value="都几把通了" />
   </component>
   <component name="WindowStateProjectService">
     <state x="190" y="243" key="#build" timestamp="1622130068017">
@@ -283,22 +312,22 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="217" y="317" key="FileChooserDialogImpl/0.0.2048.1152@0.0.2048.1152" timestamp="1618304135185" />
-    <state width="1005" height="148" key="GridCell.Tab.0.bottom" timestamp="1622555125990">
+    <state width="797" height="275" key="GridCell.Tab.0.bottom" timestamp="1622636389438">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1005" height="148" key="GridCell.Tab.0.bottom/0.0.2048.1152@0.0.2048.1152" timestamp="1622555125990" />
-    <state width="1005" height="148" key="GridCell.Tab.0.center" timestamp="1622555125990">
+    <state width="797" height="275" key="GridCell.Tab.0.bottom/0.0.2048.1152@0.0.2048.1152" timestamp="1622636389438" />
+    <state width="797" height="275" key="GridCell.Tab.0.center" timestamp="1622636389437">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1005" height="148" key="GridCell.Tab.0.center/0.0.2048.1152@0.0.2048.1152" timestamp="1622555125990" />
-    <state width="1005" height="148" key="GridCell.Tab.0.left" timestamp="1622555125989">
+    <state width="797" height="275" key="GridCell.Tab.0.center/0.0.2048.1152@0.0.2048.1152" timestamp="1622636389437" />
+    <state width="797" height="275" key="GridCell.Tab.0.left" timestamp="1622636389437">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1005" height="148" key="GridCell.Tab.0.left/0.0.2048.1152@0.0.2048.1152" timestamp="1622555125989" />
-    <state width="1005" height="148" key="GridCell.Tab.0.right" timestamp="1622555125990">
+    <state width="797" height="275" key="GridCell.Tab.0.left/0.0.2048.1152@0.0.2048.1152" timestamp="1622636389437" />
+    <state width="797" height="275" key="GridCell.Tab.0.right" timestamp="1622636389438">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state width="1005" height="148" key="GridCell.Tab.0.right/0.0.2048.1152@0.0.2048.1152" timestamp="1622555125990" />
+    <state width="797" height="275" key="GridCell.Tab.0.right/0.0.2048.1152@0.0.2048.1152" timestamp="1622636389438" />
     <state width="1005" height="371" key="GridCell.Tab.1.bottom" timestamp="1622435176123">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
@@ -351,10 +380,10 @@
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
     <state x="556" y="221" key="SettingsEditor/0.0.2048.1152@0.0.2048.1152" timestamp="1615979714116" />
-    <state x="105" y="305" key="Vcs.Push.Dialog.v2" timestamp="1622560393672">
+    <state x="105" y="305" key="Vcs.Push.Dialog.v2" timestamp="1622569358223">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>
-    <state x="105" y="305" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1622560393672" />
+    <state x="105" y="305" key="Vcs.Push.Dialog.v2/0.0.2048.1152@0.0.2048.1152" timestamp="1622569358223" />
     <state x="791" y="486" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615979162530">
       <screen x="0" y="0" width="2048" height="1152" />
     </state>

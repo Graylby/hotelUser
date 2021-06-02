@@ -6,7 +6,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     token:'',
-    refreshToken:''
+    refreshToken:'',
+    preDate:'',
+    length:'',
   },
   mutations: {
     setToken(state, token) {
@@ -15,7 +17,12 @@ export default new Vuex.Store({
     setRefreshToken(state, refreshToken) {
       state.refreshToken = refreshToken;
     },
-
+    setLength(state, length) {
+      state.length = length;
+    },
+    setDate(state, perDate) {
+      state.preDate = perDate;
+    },
   },
   actions: {
     // 前端 登出   同样是在action中管理
