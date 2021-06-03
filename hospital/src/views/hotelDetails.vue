@@ -14,6 +14,7 @@
                         title="详细信息"
                         size="large"
                         style="height: auto"/>
+                <van-cell id="评论" title="查看评价" is-link @click="onComments"/>
             </van-cell-group>
             <van-cell-group>
                 <van-cell title="居住日期" :value="date" @click="show = true" is-link />
@@ -26,8 +27,8 @@
                     :key="room.type.id"
                     :title="room.type.name"
                           :num="room.free"
-                    desc="40平方米 双床有窗"
-                    :thumb="require('../components/images/dachuangfang.png')">
+                    :desc="room.type.information"
+                    :thumb="room.type.img_url">
                 <template #num>
                     <van-button :id="room.type" @click="onOrder(room.type.id)"  type="danger" round>现在预订</van-button>
                 </template>
@@ -70,10 +71,14 @@
             }
         },
         mounted(){
-            this.hotel = this.$route.params.hotel
-            console.log(this.hotel)
+            // this.hotel = this.$route.params.hotel
+            this.hotel = store.state.hotel
             this.date = this.hotel.date
-            const params = {id:this.hotel.id}
+            let params;
+            // if (this.hotel) {
+                params = {id: this.hotel.id};
+            // }else params = store.state.nowHotelId;
+            // params = store.state.nowHotelId;
             getRoomList(params).then(data=>{
                 this.rooms = data.data.data
             })
@@ -109,6 +114,12 @@
                   if (this.showOverlay)
                     console.log(1)
                 }
+            },
+            onComments(){
+                this.$router.push({
+                    name:'comments',
+                    params:{id:this.hotel.id}
+                })
             },
             status(value){
               console.log("Emit",value)

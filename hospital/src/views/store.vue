@@ -479,22 +479,28 @@
                     }
                     goods.push(item)
                 }
-                let dada={
-                    id:1,
-                    hotelId: 1,
-                    goods:goods,
-                }
-                onSubmit(dada).then(()=>{
-                    this.show=false
-                    this.$dialog.alert({
-                        title:'成功下单',
-                        message:'商品已成功下单，马上为您送达！',
-                        theme:'round-button',
-                    }).then(()=>{
-                        console.log(this.show)
-                        this.$router.back()
+                getId().then(res=>{
+                    console.log(res)
+                    const {id} = res.data.data
+                    let dada={
+                        id:1,
+                        hotelId: 1,
+                        goods:goods,
+                        userId:id,
+                    }
+                    onSubmit(dada).then(()=>{
+                        this.show=false
+                        this.$dialog.alert({
+                            title:'成功下单',
+                            message:'商品已成功下单，马上为您送达！',
+                            theme:'round-button',
+                        }).then(()=>{
+                            console.log(this.show)
+                            this.$router.back()
+                        })
                     })
                 })
+
             },
             changeNum(goods){
                 let cart = this.newCart;

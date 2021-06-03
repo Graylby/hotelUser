@@ -43,20 +43,15 @@
             return{
                 value:5,
                 message:'',
-                msg:{
-                    id: 1,
-                    hotelId: 0,
-                    userId: 0,
-                    star: 5,
-                    comments: "哈哈哈",
-                    time: null
-                },
+                msg:{},
                 comments:[],
                 onLoad:false,
-                Height:0
+                Height:0,
+                id:'',
             }
         },
         mounted(){
+            this.id = this.$route.params.id;
             this.getList();
             this.onLoad=true;
             let topHeight = this.$refs.top.offsetHeight // 头部高度
@@ -71,7 +66,7 @@
         },
         methods:{
             getList(){
-                getComments().then(res=>{
+                getComments({hotelId:this.id}).then(res=>{
                     this.comments = res.data.data
                 })
             },
@@ -79,13 +74,17 @@
                 let data={
                     comments:this.message,
                     star:this.value,
-                    hotelId: 1,
+                    hotelId: this.id,
                     userId: 1
                 }
                 insertComment(data).then(res=>{
                     console.log(res)
                     this.value = 5;
                     this.message = '';
+                    this.$notify({
+                        type:'success',
+                        message:'评价成功'
+                    })
                     this.getList();
                 })
             }
@@ -107,6 +106,8 @@
         overflow: scroll;
         top: 45px;
         bottom 130px
+        left 0
+        right 0
     }
     .van-field__control{
         background #f4f5f7!important;

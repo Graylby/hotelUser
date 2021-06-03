@@ -39,7 +39,7 @@ export const getGuess = (params) =>{
 }
 export const onSubmit = (data) =>{
     return http.request({
-        url:'/shopCart/creat',
+        url:'/shopCart/create',
         method:'post',
         data
     })

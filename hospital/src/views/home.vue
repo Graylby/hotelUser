@@ -60,7 +60,7 @@
           <div class="img1">
             <div>
               <div style="padding: 0 0 5px 0">
-                <span>特价精选</span>
+                <span>周边景点</span>
               </div>
               <van-image
                       fit="fill"
@@ -91,7 +91,7 @@
           <div class="img2">
             <div>
               <div style="padding: 0 0 5px 0">
-                <span>住宿推荐</span>
+                <span>旅游推荐</span>
               </div>
               <van-image
                       fit="fill"

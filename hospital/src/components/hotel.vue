@@ -14,6 +14,7 @@
 </template>
 
 <script>
+    import store from "../store";
     export default {
         props:{
             oldHotel:Object,
@@ -32,6 +33,8 @@
         },
         methods:{
             hotelDetails(){
+                store.commit('setHotelId',this.hotel.id)
+                store.commit('setHotel',this.hotel)
                 this.$router.push({
                     name: '/hotel',
                     params: {hotel:this.hotel}})

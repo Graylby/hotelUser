@@ -58,6 +58,7 @@
                     username:this.username,
                     password:this.password,
                 }).then((res)=>{
+
                     console.log(res);
                     const {token,refreshToken} = res.data;
                     store.commit('setToken',token);

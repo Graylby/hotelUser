@@ -45,3 +45,10 @@ export const order = (params) =>{
         params
     })
 }
+export const isCheckIn = (data) =>{
+    return http.request({
+        url:'/reservation/isIn',
+        method:"post",
+        data
+    })
+}

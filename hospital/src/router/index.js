@@ -60,10 +60,10 @@ const routes = [
         isMenu: false
     },
     {
-        path: '/hotel/:id',
+        path: '/hotel/',
         name: '/hotel',
         component: () => import('../views/hotelDetails'),
-        props:true,
+        // props:true,
         title: '旅店详情',
         isMenu: false
     },

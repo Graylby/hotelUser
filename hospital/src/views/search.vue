@@ -27,15 +27,7 @@
     export default {
         data(){
             return{
-                list:[
-                    {
-                        ID:1,
-                        name:'wonder',
-                        info:'666',
-                        position:'天津',
-                        rest:6
-                    }
-                ],
+                list:[],
                 info:{
                     length:12,
                 },
